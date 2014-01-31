@@ -31,7 +31,7 @@ There are two things this project is not:
 1. Building yet another theme. Magento does not need more themes, it needs a better core frontend. The core must not be slanted for Magento's demos but rather be the most neutral base for implementors.
 1. Adding responsive design / mobile support. These are not "features". Doing them well **requires** consideration of the client's unique goals and constraints, and that is predicated on having an unobtrusive frontend core as a foundation. The cart goes after the horse.
 
-I am wholeheartedly concerned with both these things, but today I think the best way Magento can handle them is by addressing the foundational changes necessecary to make them more approachable for new developers and easier to maintain for complex implementations.
+I am wholeheartedly concerned with both these things, but today I think the best way Magento can handle them is by addressing the foundational changes necessary to make them more approachable for new developers and easier to maintain for complex implementations.
 
 ## Project Info
 
