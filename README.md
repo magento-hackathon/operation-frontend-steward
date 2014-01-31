@@ -35,5 +35,5 @@ I am wholeheartedly concerned with both these things, but today I think the best
 
 ## Project Info
 
-Submitted by: Brendan Falkowski @ http://gravitydept.com
-Timezone: US Eastern (GMT -5)
+* Submitted by: Brendan Falkowski @ http://gravitydept.com
+* Timezone: US Eastern (GMT -5)
