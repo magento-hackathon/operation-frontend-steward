@@ -115,18 +115,22 @@
     // TBODY - TD
 
     .linearize-table tbody td { 
-        padding:0 0 15px; 
+        padding:0 0 10px;
         border:0;
     }
 
 
-    .linearize-table tbody td:first-child { 
-        padding-top:15px; 
+    .linearize-table tbody td:first-child {
+        padding-top:15px;
         border-top:1px solid $c-table-border;
     }
 
+    .linearize-table tbody td:not([data-label]) {
+        font-weight: bold;
+    }
+
     .linearize-table tbody td[data-label] {
-        padding-left: 30px;
+        padding-left: 20px;
     }
 
     .linearize-table tbody td[data-label]:before {
