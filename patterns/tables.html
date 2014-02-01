@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="css/app-mq.css" media="all" />
 
     <script type="text/javascript" src="js/modernizr.custom.min.js"></script>
-    
+
     <!--[if lte IE 8]>
         <script type="text/javascript" src="js/selectivizr.js"></script>
     <![endif]-->
@@ -53,37 +53,360 @@
         <thead>
             <tr>
                 <th>Order #</th>
-                <th>Total</th>
-                <th>Status</th>
+                <th>Date</th>
+                <th class="data-p3">Total</th>
+                <th class="data-p2">Status</th>
+                <th>Action</th>
             </tr>
         </thead>
         
         <tfoot>
             <tr>
-                <td colspan="3"><a href="#" class="button button-micro button-subtle">Some Action</a></td>
+                <td colspan="5"><a href="#" class="action button button-micro button-subtle">Primary Action</a></td>
             </tr>
         </tfoot>
 
         <tbody>
             <tr>
                 <td>100000133</td>
-                <td><span class="price">$2,950.75</span></td>
-                <td>Complete</td>
+                <td>1/31/14</td>
+                <td class="data-p3"><span class="price">$2,950.75</span></td>
+                <td class="data-p2">Complete</td>
+                <td><a href="#">View Order</a></td>
             </tr>
             
             <tr>
                 <td>100000131</td>
-                <td><span class="price">$80.76</span></td>
-                <td>Pending</td>
+                <td>1/31/14</td>
+                <td class="data-p3"><span class="price">$80.76</span></td>
+                <td class="data-p2">Pending</td>
+                <td><a href="#">View Order</a></td>
             </tr>
             
             <tr>
                 <td>100000108</td>
-                <td><span class="price">$62.51</span></td>
-                <td>Pending</td>
+                <td>1/31/14</td>
+                <td class="data-p3"><span class="price">$62.51</span></td>
+                <td class="data-p2">Pending</td>
+                <td><a href="#">View Order</a></td>
             </tr>
         </tbody>
     </table>
+
+    <h3>Summary Tables</h3>
+    <p>
+        In the example above, we have a "summary" table, which is a table that summarizes content and allows the user to take
+        an action to view all the details. In a summary table, there are some columns that are more important than others.
+        On smaller viewports, it is acceptable to hide the unessential columns, as the user can take an action to view
+        full details. We hide unnecessary columns by using .data-p[1-4] classes to indicate the importance of
+        a specific column. The .data-p* classes are then hidden on smaller viewports. The exact breakpoint at which a
+        specific .data-p* class may vary, based on the context of the table.
+    </p>
+
+    <h3>Example .data-p* classes</h3>
+
+<pre><code class="language-css">.data-p1 {
+    display:table-cell;
+}
+
+.data-p2,
+.data-p3,
+.data-p4 {
+    display:none;
+}
+
+@include bp (min-width, 480px) {
+
+    .data-p2 {
+        display:table-cell;
+    }
+
+}
+
+@include bp (min-width, 600px) {
+
+    .data-p3 {
+        display:table-cell;
+    }
+
+}
+
+@include bp (min-width, 768px) {
+
+    .data-p4 {
+        display:table-cell;
+    }
+
+}</code></pre>
+
+    <div class="pattern-library-title">Table - Linearize</div>
+
+    <p>
+        Tables with many columns do not display well on small viewports. While hiding columns on *summary* tables is
+        acceptable, it is not acceptable on data tables because users we should not restrict access to information
+        based on viewport size. In order to display all of the data in this type of table without forcing the user to
+        scroll, we use a "linearize" pattern that turns cells into rows.
+    </p>
+
+    <h3>Example table</h3>
+
+    <table class="data-table linearize-table" id="my-orders-table" summary="Items Ordered">
+        <thead>
+        <tr>
+            <th class="name" data-no-label>
+                Product Name
+            </th>
+            <th class="sku">
+                SKU
+            </th>
+            <th class="price">
+                Price
+            </th>
+            <th class="qty">
+                Qty
+            </th>
+            <th class="subtotal">
+                Subtotal
+            </th>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr class="subtotal">
+            <td colspan="4" class="mark">
+                Subtotal
+            </td>
+            <td class="amount">
+                <span class="price">$340.00</span>
+            </td>
+        </tr>
+        <tr class="shipping">
+            <td colspan="4" class="mark">
+                Shipping &amp; Handling
+            </td>
+            <td class="amount">
+                <span class="price">$15.00</span>
+            </td>
+        </tr>
+        <tr class="grand_total">
+            <td colspan="4" class="mark">
+                <strong>Grand Total</strong>
+            </td>
+            <td class="amount">
+                <strong><span class="price">$355.00</span></strong>
+            </td>
+        </tr>
+        </tfoot>
+        <tbody>
+        <tr id="order-item-row-1">
+            <td class="name">
+                <strong class="product name">Test Product #2</strong>
+                <dl class="item options">
+                    <dt>
+                        Color
+                    </dt>
+                    <dd>
+                        Purple
+                    </dd>
+                </dl>
+            </td>
+            <td class="sku">
+                Test Product-Purple
+            </td>
+            <td class="price">
+                <span class="price-excl-tax"><span class="cart-price"><span class="price">$140.00</span></span></span>
+            </td>
+            <td class="qty">
+                <ul class="qty summary items">
+                    <li class="item">
+                        <span class="label">Ordered</span><strong>2</strong>
+                    </li>
+                </ul>
+            </td>
+            <td class="subtotal">
+                <span class="price-excl-tax"><span class="cart-price"><span class="price">$240.00</span></span></span><br>
+            </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr id="order-item-row-2">
+            <td class="name">
+                <strong class="product name">Test Product</strong>
+                <dl class="item options">
+                    <dt>
+                        Color
+                    </dt>
+                    <dd>
+                        Green
+                    </dd>
+                </dl>
+            </td>
+            <td class="sku">
+                Test Product-Green
+            </td>
+            <td class="price">
+                <span class="price-excl-tax"><span class="cart-price"><span class="price">$120.00</span></span></span>
+            </td>
+            <td class="qty">
+                <ul class="qty summary items">
+                    <li class="item">
+                        <span class="label">Ordered</span><strong>2</strong>
+                    </li>
+                </ul>
+            </td>
+            <td class="subtotal">
+                <span class="price-excl-tax"><span class="cart-price"><span class="price">$240.00</span></span></span><br>
+            </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr id="order-item-row-3">
+            <td class="name">
+                <strong class="product name">Bundled Product</strong>
+            </td>
+            <td class="sku">
+                Bundled Product-Test Product-Green
+            </td>
+            <td class="price">
+                <span class="price excl tax"><span class="cart price"><span class="price">$100.00</span></span></span><br>
+            </td>
+            <td class="qty">
+                &nbsp;
+            </td>
+            <td class="subtotal">
+                <span class="price excl tax"><span class="cart price"><span class="price">$100.00</span></span></span><br>
+            </td>
+        </tr>
+        <tr>
+            <td class="label" colspan="5">
+                <div class="option label">
+                    Laptop
+                </div>
+            </td>
+        </tr>
+        <tr class="border" id="order-item-row-4">
+            <td class="value">
+                1 x Test Product-Green <span class="price">$100.00</span>
+            </td>
+            <td class="sku">
+                Test Product-Green
+            </td>
+            <td class="price">
+                &nbsp;
+            </td>
+            <td class="qty">
+                Ordered: <strong>1</strong><br>
+            </td>
+            <td class="subtotal">
+                &nbsp;
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3>The markup for a linearized table follows this pattern</h3>
+
+    <pre><code class="language-markup">&lt;table class=&quot;linearize-table&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Product Name&lt;/th&gt;
+            &lt;th&gt;Price&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;-- The data-label attribute will be added via JS --&gt;
+            &lt;td data-label=&quot;Product Name&quot;&gt;Mountain Bike&lt;/td&gt;
+            &lt;td data-label=&quot;Price&quot;&gt;$3,000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&quot;Product Name&quot;&gt;Helment&lt;/td&gt;
+            &lt;td data-label=&quot;Price&quot;&gt;$180&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+    <h3>
+        When a linearize table is displayed on a small viewport, the "data-label" attribute is used as the label for
+        that cell
+    </h3>
+    <pre><code class="language-css">.linearize-table tbody td[data-label]:before {
+    content:attr(data-label) &quot;:&quot;;
+}</code></pre>
+
+    <h3>Rather than adding the data-label attribute to all tbody td elements, we have a jQuery decorator that does this for us</h3>
+
+    <p>
+        The decorator allows us to write linearize table markup without the data-label attributes. This is useful because
+        Magento has multiple item render template files, and using a decorator eliminates the need to update label/th values
+        in multiple templates.
+    </p>
+
+    <p>
+        In some linearized tables, the first column in the table does not need to be prepended with a label, as its
+        meaning is apparent (eg, product name). For this type of column, a "data-no-label" attribute can be added to the
+        th. You can see an example of this in the linearized table below.
+    </p>
+
+    <pre><code class="language-javascript">// ==============================================
+// UI Pattern - Linearize Table
+// ==============================================
+
+$(&#x27;.linearize-table&#x27;).each(function(){
+
+    var cellLabels = [];
+
+    // Loop through all table headers to find the labels
+    $(this).find(&#x27;thead th&#x27;).each(function(index){
+        // Only assign label if there is no data-no-label attribute on the th. Adding data-no-label will display
+        // the value of each cell without it being prepended by a label, which can be useful for product name and
+        // similar data types.
+        cellLabels[index] = ($(this).is(&#x27;[data-no-label]&#x27;)) ? false : $(this).text().trim();
+    });
+
+    $(this).find(&#x27;tbody tr&#x27;).each(function(){
+        // Looping through each td inside of each row so that the index value will match that of thead &gt; tr &gt; th
+        $(this).children(&#x27;td&#x27;).each(function(index){
+            var label = cellLabels[index];
+            // As long as the th did not contain a data-no-label attribute, add the data-label attribute
+            if (label) {
+                $(this).attr(&#x27;data-label&#x27;, label);
+            }
+        });
+    });
+});</code></pre>
+
+    <h3>Using the JS decorator, we can now write our markup like this</h3>
+
+    <pre><code class="language-markup">&lt;table class=&quot;linearize-table&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th data-no-label&gt;Product Name&lt;/th&gt;
+            &lt;th&gt;Price&lt;/th&gt;
+            &lt;th&gt;Qty&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Mountain Bike&lt;/td&gt;
+            &lt;td&gt;$3,000&lt;/td&gt;
+            &lt;td&gt;2&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Helment&lt;/td&gt;
+            &lt;td&gt;$180&lt;/td&gt;
+			&lt;td&gt;1&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+    <div class="pattern-library-title">Table - Linearize Custom</div>
+
+    <p>
+        For tables that are a more prominent part of the user experience (eg, cart items table), using a vanilla linearize
+        pattern is not appropriate, as the screen real estate can be used in a more effective manner. For an example of
+        this, reference the cart on the <a href="http://shop.angrybirds.com">shop.angrybirds.com</a> site.
+    </p>
+
 </section>
 
 

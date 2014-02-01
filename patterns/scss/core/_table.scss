@@ -17,32 +17,41 @@
 
 
 // ----------------------------------------------
-// Responsive table groups
-
-.data-g1 { 
-    display:table-cell; 
-}
-
-.data-g2,
-.data-g3,
-.data-g4 { 
-    display:none;
-}
-
-
-// ----------------------------------------------
 // Responsive table priorities
 
-.data-p1 { 
-    display:table-cell;
+.data-p1 {
+    display:table-cell; 
 }
 
 .data-p2,
 .data-p3,
 .data-p4 {
-    display:none; 
+    display:none;
 }
 
+@include bp (min-width, 480px) {
+
+    .data-p2 {
+        display:table-cell;
+    }
+
+}
+
+@include bp (min-width, 600px) {
+
+    .data-p3 {
+        display:table-cell;
+    }
+
+}
+
+@include bp (min-width, 768px) {
+
+    .data-p4 {
+        display:table-cell;
+    }
+
+}
 
 
 // ==============================================
@@ -68,11 +77,9 @@
     white-space:nowrap;
 }
 
-.data-table tfoot tr { 
+.data-table tfoot tr {
     background:$c-table-background;
 }
-
-
 
 // ==============================================
 // Linearize Table
@@ -81,7 +88,9 @@
 @include bp (max-width, 599px) {
 
     .linearize-table {
-        border-width:0 0 1px;
+//        border-width:0 0 1px;
+        border-collapse:separate;
+        border:1px solid $c-table-border;
     }
 
     .linearize-table tr,
@@ -98,7 +107,7 @@
 
     // TBODY - TR
 
-    .linearize-table tbody tr { 
+    .linearize-table tbody tr {
         position:relative;
     }
 
@@ -115,14 +124,60 @@
     // TBODY - TD
 
     .linearize-table tbody td { 
-        padding:0 0 15px; 
+        padding:0 10px 10px 0;
         border:0;
     }
 
 
-    .linearize-table tbody td:first-child { 
-        padding-top:15px; 
+    .linearize-table tbody td:first-child {
+        padding-top:15px;
+        padding-left:10px;
+    }
+
+    .linearize-table tbody:not(:first-of-type) td:first-child {
         border-top:1px solid $c-table-border;
+    }
+
+    .linearize-table tbody td:not([data-label]) {
+        font-weight:bold;
+    }
+
+    .linearize-table tbody td[data-label] {
+        padding-left:20px;
+    }
+
+    .linearize-table tbody td[data-label]:before {
+        content:attr(data-label) ":";
+        display:inline-block;
+        padding-right:5px;
+        font-weight:bold;
+    }
+
+    // TFOOT - TD
+
+    .linearize-table tfoot tr {
+        display:block;
+        border-top:1px solid $c-table-border;
+    }
+
+    .linearize-table tfoot tr:after {
+        @include clearfix();
+    }
+
+    // TODO: Floating the td elements removes their table-cell display type, so their borders don't collapse, causing double borders
+    .linearize-table tfoot td {
+        float:left;
+        border:0px;
+    }
+
+    .linearize-table tfoot td:nth-child(odd) {
+        clear:left;
+        width:percentage(3/5);
+    }
+
+    .linearize-table tfoot td:nth-child(even) {
+        text-align:left;
+        width:percentage(2/5);
     }
 
     // Helpers

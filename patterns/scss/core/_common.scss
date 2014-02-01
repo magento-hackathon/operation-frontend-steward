@@ -320,6 +320,35 @@ a.button-subtle:active {
 }
 
 
+// ==============================================
+// Item Options
+// ==============================================
+
+.item.options {
+    padding-left: 10px;
+}
+
+.item.options:after {
+    @include clearfix;
+}
+
+.item.options dt {
+    float: left;
+    clear: left;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.item.options dt:after {
+    content: ': ';
+}
+
+.item.options dd {
+    float: left;
+    padding-left: 15px;
+    margin: 0 0 6px;
+}
+
 
 // ==============================================
 // Breadcrumbs
