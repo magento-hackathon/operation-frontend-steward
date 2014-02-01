@@ -125,6 +125,16 @@
         border-top:1px solid $c-table-border;
     }
 
+    .linearize-table tbody td[data-label] {
+        padding-left: 30px;
+    }
+
+    .linearize-table tbody td[data-label]:before {
+        content: attr(data-label) ":";
+        padding-right: 5px;
+        font-weight: bold;
+    }
+
     // Helpers
 
     .linearize-table .linearize-hide { 

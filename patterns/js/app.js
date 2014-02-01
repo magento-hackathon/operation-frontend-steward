@@ -70,6 +70,34 @@ $jQ(document).ready(function($){
     });
 
 
+    // ==============================================
+    // UI Pattern - Linearize Table
+    // ==============================================
+
+    $('.linearize-table').each(function(){
+
+        var tableLabels = [];
+
+        // Loop through all table headers to find the labels
+        $(this).find('thead th').each(function(index){
+            // Only assign label if there is no data-no-label attribute on the th. Adding data-no-label will display
+            // the value of each cell without it being prepended by a label, which can be useful for product name and
+            // similar data types.
+            tableLabels[index] = ($(this).is('[data-no-label]')) ? false : $(this).text().trim();
+        });
+
+        $(this).find('tbody tr').each(function(){
+            // Looping through each td inside of each row so that the index value will match that of thead > tr > th
+            $(this).children('td').each(function(index){
+                var label = tableLabels[index];
+                // As long as the th did not contain a data-no-label attribute, add the data-label attribute
+                if (label) {
+                    $(this).attr('data-label', label);
+                }
+            });
+        });
+    });
+
 
 // ============================================== 
 // END: $jQ(document).ready()

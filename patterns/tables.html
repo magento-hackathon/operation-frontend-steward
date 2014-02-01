@@ -84,6 +84,216 @@
             </tr>
         </tbody>
     </table>
+
+    <div class="pattern-library-title">Table - Wide Data Table</div>
+
+    <table class="order review items data data-table" id="checkout-review-table">
+        <thead>
+            <tr>
+                <th rowspan="1" class="col item">Product Name</th>
+                <th colspan="1" class="col price">Price</th>
+                <th rowspan="1" class="col qty">Qty</th>
+                <th colspan="1" class="col subtotal">Subtotal</th>
+            </tr>
+        </thead>
+        <tfoot>
+        <tr class="totals sub">
+            <td style="" class="mark" colspan="3">
+                Subtotal
+            </td>
+            <td style="" class="amount">
+                <span class="price">$340.00</span></td>
+        </tr>
+        <tr class="totals shipping excl">
+            <td style="" class="mark" colspan="3">
+                Shipping &amp; Handling (Flat Rate - Fixed)
+            </td>
+            <td style="" class="amount">
+                <span class="price">$15.00</span></td>
+        </tr>
+        <tr class="grand totals">
+            <td style="" class="mark" colspan="3">
+                <strong>Grand Total</strong>
+            </td>
+            <td style="" class="amount">
+                <strong><span class="price">$355.00</span></strong>
+            </td>
+        </tr>
+        </tfoot>
+        <tbody>
+        <tr>
+            <td class="col item"><strong class="product name">Test Product</strong>
+                <dl class="review item options">
+                    <dt>Color</dt>
+                    <dd>Green</dd>
+                </dl>
+            </td>
+            <td class="col price excl tax">
+                    <span class="cart price">
+
+                            <span class="price">$120.00</span>
+        </span>
+
+
+            </td>
+            <td class="col qty"><span class="qty">2</span></td>
+            <td class="col subtotal excl tax">
+                    <span class="cart price">
+
+                            <span class="price">$240.00</span>
+        </span>
+            </td>
+        </tr>
+        <tr>
+            <td class="col item"><strong class="product name">Bundled Product</strong>
+                <dl class="review item options">
+                    <dt>Laptop</dt>
+                    <dd>1 x Test Product-Green <span class="price">$100.00</span></dd>
+                </dl>
+            </td>
+            <td class="col price excl tax">
+                    <span class="cart price">
+
+                            <span class="price">$100.00</span>
+        </span>
+
+
+            </td>
+            <td class="col qty"><span class="qty">1</span></td>
+            <td class="col subtotal excl tax">
+                    <span class="cart price">
+
+                            <span class="price">$100.00</span>
+        </span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="pattern-library-title">Table - Linearize</div>
+
+    <table class="data table order items data-table linearize-table" id="my-orders-table" summary="Items Ordered">
+        <thead>
+        <tr>
+            <th class="col name" data-no-label="sdb">
+                Product Name
+            </th>
+            <th class="col sku">
+                SKU
+            </th>
+            <th class="col price">
+                Price
+            </th>
+            <th class="col qty">
+                Qty
+            </th>
+            <th class="col subtotal">
+                Subtotal
+            </th>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr class="subtotal">
+            <td colspan="4" class="mark">
+                Subtotal
+            </td>
+            <td class="amount">
+                <span class="price">$340.00</span>
+            </td>
+        </tr>
+        <tr class="shipping">
+            <td colspan="4" class="mark">
+                Shipping &amp; Handling
+            </td>
+            <td class="amount">
+                <span class="price">$15.00</span>
+            </td>
+        </tr>
+        <tr class="grand_total">
+            <td colspan="4" class="mark">
+                <strong>Grand Total</strong>
+            </td>
+            <td class="amount">
+                <strong><span class="price">$355.00</span></strong>
+            </td>
+        </tr>
+        </tfoot>
+        <tbody>
+        <tr id="order-item-row-1">
+            <td class="col name">
+                <strong class="product name">Test Product</strong>
+                <dl class="item options">
+                    <dt>
+                        Color
+                    </dt>
+                    <dd>
+                        Green
+                    </dd>
+                </dl>
+            </td>
+            <td class="col sku">
+                Test Product-Green
+            </td>
+            <td class="col price">
+                <span class="price-excl-tax"><span class="cart-price"><span class="price">$120.00</span></span></span>
+            </td>
+            <td class="col qty">
+                <ul class="qty summary items">
+                    <li class="item">
+                        <span class="label">Ordered</span><strong>2</strong>
+                    </li>
+                </ul>
+            </td>
+            <td class="col subtotal">
+                <span class="price-excl-tax"><span class="cart-price"><span class="price">$240.00</span></span></span><br>
+            </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr id="order-item-row-3">
+            <td class="col name">
+                <strong class="product name">Bundled Product</strong>
+            </td>
+            <td class="col sku">
+                Bundled Product-Test Product-Green
+            </td>
+            <td class="col price">
+                <span class="price excl tax"><span class="cart price"><span class="price">$100.00</span></span></span><br>
+            </td>
+            <td class="col qty">
+                &nbsp;
+            </td>
+            <td class="col subtotal">
+                <span class="price excl tax"><span class="cart price"><span class="price">$100.00</span></span></span><br>
+            </td>
+        </tr>
+        <tr>
+            <td class="col label" colspan="5">
+                <div class="option label">
+                    Laptop
+                </div>
+            </td>
+        </tr>
+        <tr class="border" id="order-item-row-4">
+            <td class="col value">
+                1 x Test Product-Green <span class="price">$100.00</span>
+            </td>
+            <td class="col sku">
+                Test Product-Green
+            </td>
+            <td class="col price">
+                &nbsp;
+            </td>
+            <td class="col qty">
+                Ordered: <strong>1</strong><br>
+            </td>
+            <td class="col subtotal">
+                &nbsp;
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
 </section>
 
 
