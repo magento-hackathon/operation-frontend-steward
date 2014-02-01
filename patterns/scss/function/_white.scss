@@ -1,0 +1,20 @@
+/**
+* Gravity Department
+*
+* @author     Brendan Falkowski (http://gravitydept.com)
+* @copyright  Copyright 2014 Gravity Department
+* @license    All rights reserved.
+*/
+
+
+// ==============================================
+// Function - White
+// ==============================================
+
+@function white ($opacity) {
+    @return rgba(255, 255, 255, $opacity);
+}
+
+@function white-fallback ($opacity) { 
+    @return darken(#FFF, (1 - $opacity));
+}

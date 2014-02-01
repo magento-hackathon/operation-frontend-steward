@@ -1,0 +1,504 @@
+/**
+* Gravity Department
+*
+* @author     Brendan Falkowski (http://gravitydept.com)
+* @copyright  Copyright 2014 Gravity Department
+* @license    All rights reserved.
+*/
+
+
+// ==============================================
+// Address
+// ==============================================
+
+.address-list address { 
+    margin-bottom:1em; 
+}
+
+
+
+// ==============================================
+// Availability
+// ==============================================
+
+.availability { 
+    font-size:$f-size-xxs; 
+    text-transform:uppercase; 
+}
+
+.availability.in-stock { 
+    color:$c-success; 
+}
+
+.availability.available-soon,
+.availability.out-of-stock { 
+    color:$c-danger; 
+}
+
+
+
+// ==============================================
+// Block Module
+// ==============================================
+
+.block {
+    @include border-radius (5px);
+    margin-bottom:$gap;
+    border:1px solid $c-module-border;
+    background:$c-module-background;
+}
+
+.block-title { 
+    position:relative;
+    padding-top:4px;
+    padding-bottom:10px;
+    border-bottom:1px solid $c-module-border;
+}
+
+.block-title h2,
+.block-title h3 { 
+    @include h3;
+    margin-bottom:0;
+}
+
+.block-content { 
+    padding-top:15px;
+    background:#FFF;
+}
+
+.block-content.unpad { 
+    padding:0;
+}
+
+
+
+// ==============================================
+// Block Module - With Toggle
+// ==============================================
+
+.block.toggle { 
+    background:$c-module-background;
+}
+
+.block.toggle .block-title { 
+    @include not-selectable;
+    padding:10px 14px;
+    border-bottom:0;
+    background:darken($c-module-background, 5%);
+}
+
+.block.toggle .block-title:hover { 
+    background:darken($c-module-background, 10%);
+    cursor:pointer;
+}
+
+.block.toggle .block-title:before {
+    @include triangle (down, 6px, $c-text);
+    right:14px;
+    top:50%;
+    margin-top:-3px;
+}
+
+// Toggle - Active
+
+.block.toggle-active .block-title {
+    background:darken($c-module-background, 10%);
+}
+
+.block.toggle-active .block-title:before { 
+    @include triangle (up, 6px, $c-text);
+}
+
+
+
+// ==============================================
+// Buttons
+// ==============================================
+
+.button { 
+    @include border-radius (4px);
+    @include box-shadow (black(0.2) 0 0 0 1px inset);
+    background:$c-button;
+    display:inline-block; 
+    padding:0 15px; 
+    border:0;
+    color:#FFF; 
+    font-size:$f-size;
+    font-weight:normal; 
+    line-height:40px; 
+    text-align:center;
+    vertical-align:middle; 
+    white-space:nowrap;
+}
+
+a.button { 
+    text-decoration:none; 
+}
+
+.button:hover,
+a.button:hover { 
+    background:$c-button-hover;
+    color:#FFF;
+    cursor:pointer; 
+}
+
+.button:focus,
+.button:active { 
+    background:$c-button-active;
+    color:#FFF;
+}
+
+
+
+// ==============================================
+// Button + Adjacent Button
+// ==============================================
+
+.button + .button { 
+    margin-left:5px; 
+}
+
+
+
+// ==============================================
+// Button + Adjacent Link
+// ==============================================
+
+.button + .alt-action { 
+    margin-left:10px; 
+    font-size:$f-size-xs; 
+    line-height:28px; 
+}
+
+
+
+// ==============================================
+// Button - Sizes
+// ==============================================
+
+.button-huge { 
+    padding:0 24px; 
+    font-size:$f-size-xxl; 
+    font-weight:300;
+    line-height:60px;
+}
+
+.button-large { 
+    padding:0 15px;
+    font-size:$f-size-xl;
+    line-height:48px;
+}
+
+.button-small { 
+    padding:0 10px; 
+    font-size:$f-size-xs; 
+    line-height:30px;
+}
+
+.button-micro { 
+    padding:0 10px; 
+    font-size:$f-size-xxs; 
+    line-height:24px; 
+}
+
+
+
+// ==============================================
+// Button - Block Width
+// ==============================================
+
+.button-block { 
+    width:100%;
+}
+
+
+
+// ==============================================
+// Button State - Danger
+// ==============================================
+
+.button-danger { 
+    background:$c-button-danger;
+}
+
+.button-danger:hover,
+.button-danger:focus,
+a.button-danger:hover,
+a.button-danger:focus { 
+    background:$c-button-danger-hover;
+    color:#FFF;
+}
+
+.button-danger:active,
+a.button-danger:active { 
+    background:$c-button-danger-active;
+    color:#FFF;
+}
+
+
+
+// ==============================================
+// Button State - Disabled
+// Use "class" for <a>.
+// Use "pseudo-selector" for form elements supporting "disabled" attribute.
+// ==============================================
+
+.button.disabled,
+.button:disabled { 
+    background:$c-button-disabled;
+    color:$c-button-disabled-text;
+}
+
+.button.disabled:hover,
+.button.disabled:focus,
+.button:disabled:hover,
+.button:disabled:focus,
+a.button.disabled:hover,
+a.button.disabled:focus,
+a.button:disabled:hover,
+a.button:disabled:focus { 
+    background:$c-button-disabled;
+    color:$c-button-disabled-text;
+    cursor:not-allowed;
+}
+
+.button.disabled:active,
+.button:disabled:active,
+a.button.disabled:active,
+a.button:disabled:active { 
+    background:$c-button-disabled;
+    color:$c-button-disabled-text;
+}
+
+
+
+// ==============================================
+// Button State - Priority
+// ==============================================
+
+.button-priority {  
+    background:$c-button-priority;
+    color:#FFF;
+}
+
+.button-priority:hover,
+.button-priority:focus,
+a.button-priority:hover,
+a.button-priority:focus { 
+    background:$c-button-priority-hover;
+    color:#FFF;
+}
+
+.button-priority:active,
+a.button-priority:active { 
+    background:$c-button-priority-active;
+    color:#FFF;
+}
+
+
+// ==============================================
+// Button State - Subtle
+// ==============================================
+
+.button-subtle {  
+    background:$c-button-subtle;
+    color:#FFF;
+}
+
+.button-subtle:hover,
+.button-subtle:focus,
+a.button-subtle:hover,
+a.button-subtle:focus { 
+    background:$c-button-subtle-hover;
+    color:#FFF;
+}
+
+.button-subtle:active,
+a.button-subtle:active { 
+    background:$c-button-subtle-active;
+    color:#FFF;
+}
+
+
+
+// ==============================================
+// Breadcrumbs
+// ==============================================
+
+.breadcrumbs {
+    overflow:hidden;
+}
+
+.breadcrumbs li {
+    float:left;
+    font-size:$f-size-xxs;
+}
+
+.breadcrumbs a {
+    float:left;
+}
+
+.breadcrumbs strong { 
+    font-weight:normal;
+}
+
+.breadcrumbs span {
+    float:left;
+    padding:0 7px;
+}
+
+
+
+// ==============================================
+// Callout
+// ==============================================
+
+.callout { 
+    @include border-radius (5px);
+    margin-bottom:$margin-bottom;
+    padding:15px;
+    border:1px solid $c-module-border;
+    background:$c-module-background;
+}
+
+
+
+// ==============================================
+// Container
+// ==============================================
+
+.container {
+    position:relative;
+    max-width:($trim + $max-content-width + $trim);
+    margin:0 auto; 
+    padding:15px;
+}
+
+.container:after { 
+    @include clearfix;
+}
+
+
+
+// ==============================================
+// Helper Classes
+// ==============================================
+
+
+// ----------------------------------------------
+// Magento Helpers
+
+.a-center { 
+    text-align:center;
+}
+
+.a-right,
+.align-right {
+    text-align:right;
+}
+
+.no-display { 
+    display:none !important;
+}
+
+.nobr,
+.nowrap { 
+    white-space:nowrap;
+}
+
+.width-full { 
+    width:100%; 
+}
+
+
+// ----------------------------------------------
+// Custom Helpers
+
+.hidden { 
+    display:none;
+}
+
+
+
+// ==============================================
+// Messages
+// ==============================================
+
+.messages { 
+    margin:0 0 15px;
+}
+
+.messages li li { 
+    @include border-radius (2px);
+    position:relative;
+    margin-bottom:5px; 
+    padding:15px; 
+    background:$c-module-background;
+    color:#FFF;
+    line-height:1.3;
+}
+
+.messages .error-msg li { 
+    background:$c-danger;
+}
+
+.messages .notice-msg li { 
+    background:$c-warn; 
+    color:$c-text;
+}
+
+.messages .success-msg li {
+    background:$c-success; 
+}
+
+//.messages a { }
+
+
+
+// ==============================================
+// Standard Formatted Text Block
+// ==============================================
+
+.std { 
+    max-width:$max-std-formatted-width; 
+}
+
+.std ol { 
+    list-style:decimal outside; 
+    margin-bottom:$margin-bottom; 
+}
+
+.std ol li { 
+    margin-left:2em; 
+}
+
+.std ul { 
+    list-style:disc outside; 
+    margin-bottom:$margin-bottom; 
+}
+
+.std ul li { 
+    margin-left:2em; 
+}
+
+.std .note { 
+    color:$c-text-subtle;
+    font-size:$f-size-xs;
+}
+
+
+
+// ==============================================
+// Toggle UI
+// ==============================================
+
+.no-js .toggle-button,
+.js .toggle-target { 
+    display:none; 
+}
+
+.js .toggle-active .toggle-target { 
+    display:block; 
+}
+
+

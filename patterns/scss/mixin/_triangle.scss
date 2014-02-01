@@ -1,0 +1,47 @@
+/**
+* Gravity Department
+*
+* @author     Brendan Falkowski (http://gravitydept.com)
+* @copyright  Copyright 2014 Gravity Department
+* @license    All rights reserved.
+*/
+
+
+// ==============================================
+// Mixin - Triangle
+// ==============================================
+
+@mixin triangle ($direction: up, $size: 5px, $color: #000) {
+	content:'';
+	position:absolute;
+	width:0;
+	height:0;
+	
+	@if $direction == up {
+		border-right:  $size solid transparent;
+		border-left:   $size solid transparent;
+		border-bottom: $size solid $color;
+		border-top:    none;
+	}
+	
+	@if $direction == down {
+		border-right:  $size solid transparent;
+		border-left:   $size solid transparent;
+		border-top:    $size solid $color;
+		border-bottom: none;
+	}
+	
+	@if $direction == right {
+		border-top:    $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-left:   $size solid $color;
+	    border-right:  none;
+	}
+	
+	@if $direction == left {
+		border-top:    $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-right:  $size solid $color;
+		border-left:   none;
+	}
+}

@@ -1,0 +1,349 @@
+/**
+* Gravity Department
+*
+* @author     Brendan Falkowski (http://gravitydept.com)
+* @copyright  Copyright 2014 Gravity Department
+* @license    All rights reserved.
+*/
+
+
+// ==============================================
+// Forms
+// ==============================================
+
+
+// ----------------------------------------------
+// Controls
+
+//.controls { }
+
+.controls .controls-title { 
+    margin-bottom:8px;
+    font-size:$f-size-xs;
+    font-weight:bold;
+    line-height:1.3;
+}
+
+.controls .control { 
+    padding-bottom:5px; 
+}
+
+.controls .control:last-child { 
+    padding-bottom:0; 
+}
+
+
+// ----------------------------------------------
+// Fieldsets
+
+.fieldset { 
+    margin-bottom:$margin-bottom;
+}
+
+.fieldset .legend { 
+    @include h2;
+    margin-bottom:1em;
+    padding-bottom:0.5em;
+    border-bottom:1px solid $c-fieldset-border;
+}
+
+// ----------------------------------------------
+// Input Box
+
+.input-box:after { 
+    @include clearfix;
+}
+
+// For adjacent select inputs.
+// Example: credit card expiration month and year.
+.input-box .v-fix { 
+    float:left;
+    margin-right:5px;
+}
+
+
+// ----------------------------------------------
+// Input Hint
+
+.input-hint { 
+    margin-top:5px;
+    color:$c-text-subtle;
+    font-size:$f-size-xs;
+    line-height:1.3;
+}
+
+
+// ----------------------------------------------
+// Input Quantity
+
+input[type=number].qty,
+input[type=text].qty {
+    width:50px; 
+}
+
+
+// ----------------------------------------------
+// Input Text
+
+.input-text { 
+    @include appearance (none);
+    @include border-radius (5px);
+    @include box-shadow (black(0.2) 0 1px 5px 0 inset);
+    border:1px solid $c-input-border; 
+    background:#FFF; 
+    font-size:$f-size;
+}
+
+.input-text[readonly] { 
+    opacity:0.6;
+}
+
+.input-text:focus { 
+    border-color:$c-input-border-focus; 
+}
+
+.input-text.validation-failed { 
+    border-color:$c-danger;
+}
+
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=tel],
+input[type=text] { 
+    width:21em; 
+    max-width:100%; 
+    height:40px; 
+    padding:0 8px; 
+}
+
+.ie8 .input-text { 
+    max-width:none; 
+}
+
+
+// ----------------------------------------------
+// Labels
+
+label { 
+    display:inline-block;  
+    font-size:$f-size-xs;
+    font-weight:bold; 
+    line-height:1.3;
+}
+
+label.required:after,
+span.required:after { 
+    content:' *'; 
+    color:$c-danger; 
+    font-weight:normal; 
+}
+
+label.required em,
+span.required em { 
+    display:none; 
+}
+
+
+// ----------------------------------------------
+// Placeholder
+
+::-webkit-input-placeholder { 
+    color:$c-input-placeholder; 
+    font-size:$f-size;
+}
+
+input:-moz-placeholder { 
+    color:$c-input-placeholder; 
+    font-size:$f-size;
+}
+
+
+// ----------------------------------------------
+// Select
+
+// Select menus are replaced by JS with custom controls.
+// See: /scss/vendor/_selecty.scss
+
+select { 
+    max-width:100%; 
+    font-size:16px; // Prevent iOS from zooming on focus
+}
+
+select + select { 
+    margin-left:5px; 
+}
+
+
+
+// ----------------------------------------------
+// Textarea
+
+textarea { 
+    @include box-sizing (border-box);
+    width:100%; 
+    max-width:40em; 
+    padding:5px;
+}
+
+
+// ----------------------------------------------
+// Checkbox And Radio
+
+.checkbox,
+.radio { 
+    position:relative;
+    top:-2px;
+    display:inline-block;
+}
+
+.checkbox + label,
+.radio + label { 
+    width:auto; 
+    max-width:85%; 
+    padding:0 0 0 8px; 
+    font-size:$f-size; 
+    font-weight:normal; 
+    line-height:1.3;
+    vertical-align:top; 
+}
+
+
+// ----------------------------------------------
+// Validation
+
+.validation-advice { 
+    margin:5px 0 0; 
+    color:$c-danger; 
+    font-size:$f-size-xs; 
+}
+
+p.required { 
+    display:none; 
+}
+
+
+
+// ==============================================
+// Forms - Contrast Module
+// ==============================================
+
+.contrast-module .input-text { 
+    border-color:$c-input-border-contrast;
+}
+
+
+
+// ==============================================
+// Stack Form
+// ==============================================
+
+.stack-form { 
+    margin-bottom:$gap;
+}
+
+//.stack-form .fieldset {  }
+
+//.stack-form .fieldset .legend {  }
+
+.stack-form .form-list li { 
+    display:block; 
+    margin-bottom:20px; 
+}
+
+.stack-form .form-list li:after { 
+    @include clearfix; 
+}
+
+.stack-form .input-box { 
+    padding-top:5px; 
+}
+
+.stack-form .form-list .fields { 
+    overflow:hidden; 
+    margin-bottom:0; 
+}
+
+.stack-form .form-list .fields .field { 
+    margin-bottom:18px; 
+}
+
+//.stack-form .form-list .fields .field + .field {  }
+
+
+
+// ==============================================
+// Scaffold Form
+// ==============================================
+
+.scaffold-form { 
+    margin-bottom:$gap;
+}
+
+.scaffold-form .form-list li { 
+    display:block; 
+    padding-bottom:20px; 
+}
+
+.scaffold-form .form-list li:after { 
+    @include clearfix; 
+}
+
+.scaffold-form .form-list .fields { 
+    padding:0; 
+}
+
+.scaffold-form .field { 
+    overflow:hidden; 
+    padding-bottom:18px; 
+}
+
+.scaffold-form label:first-child { 
+    float:left; 
+    width:140px; 
+    padding:0.75em 0.75em 0 0; 
+}
+
+.scaffold-form select { 
+    margin-top:4px; 
+}
+
+.scaffold-form .input-box { 
+    float:left; 
+    max-width:350px; 
+}
+
+.scaffold-form .checkbox + label,
+.scaffold-form .radio + label { 
+    float:none; 
+    padding:0 0 0 8px; 
+}
+
+.scaffold-form .buttons-set { 
+    padding-top:5px; 
+}
+
+// ----------------------------------------------
+
+@include bp (max-width, 599px) {
+
+    .scaffold-form li { 
+        padding:0 0 18px; 
+    }
+
+    .scaffold-form label:first-child { 
+        float:none; 
+        width:auto; 
+        padding:0; 
+    }
+
+    .scaffold-form .input-box { 
+        float:none; 
+        max-width:100%; 
+        padding-top:5px;
+    }
+
+}
+
+
+

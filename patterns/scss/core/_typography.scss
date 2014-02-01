@@ -1,0 +1,99 @@
+/**
+* Gravity Department
+*
+* @author     Brendan Falkowski (http://gravitydept.com)
+* @copyright  Copyright 2014 Gravity Department
+* @license    All rights reserved.
+*/
+
+
+// ==============================================
+// Base Elements
+// ==============================================
+
+body, 
+button,
+input, 
+select, 
+table, 
+textarea { 
+    font-family:$f-stack-sans; 
+    color:$c-text; 
+    font-size:$f-size; 
+    line-height:$line-height;
+}
+
+a { 
+    color:$c-link; 
+    text-decoration:none; 
+}
+
+a:hover {
+    color:$c-link-hover; 
+    text-decoration:none; 
+}
+
+a:focus,
+a:active { 
+    outline:0;
+    color:$c-link-active;
+}
+
+p { 
+    margin:0 0 $margin-bottom; 
+}
+
+ol,
+ul { 
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+
+
+// ==============================================
+// Headings
+// ==============================================
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    margin:0;
+    font-family:inherit;
+    font-weight:normal;
+    font-style:normal;
+}
+
+h1,
+.h1 { 
+    @include h1; 
+}
+
+h2,
+.h2 { 
+    @include h2; 
+}
+
+h3,
+.h3 { 
+    @include h3; 
+}
+
+h4,
+.h4 { 
+    @include h4; 
+}
+
+h5,
+.h5 { 
+    @include h5;
+}
+
+h6,
+.h6 { 
+    @include h6; 
+}

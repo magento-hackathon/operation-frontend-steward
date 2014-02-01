@@ -1,0 +1,64 @@
+/**
+* Gravity Department
+*
+* @author     Brendan Falkowski (http://gravitydept.com)
+* @copyright  Copyright 2014 Gravity Department
+* @license    All rights reserved.
+*/
+
+
+// ==============================================
+// Mixin - Typography
+// ==============================================
+
+@mixin h1 {
+    margin-bottom:0.5em; 
+    color:$c-h1;
+    font-family:$f-stack-sans; 
+    font-size:36px; 
+    font-weight:bold; 
+    font-style:normal; 
+    line-height:42px; 
+    text-rendering:optimizeLegibility; 
+    text-transform:none; 
+}
+
+@mixin h2 {
+    margin-bottom:0.5em; 
+    color:$c-h2; 
+    font-family:$f-stack-sans; 
+    font-size:20px; 
+    font-weight:bold; 
+    font-style:normal; 
+    line-height:1.4; 
+    text-rendering:optimizeLegibility; 
+    text-transform:none; 
+}
+
+@mixin h3 {
+    margin-bottom:0.2em;  
+    color:$c-h3;
+    font-family:$f-stack-sans; 
+    font-size:18px; 
+    font-weight:bold; 
+    font-style:normal; 
+    line-height:1.3333; 
+    text-rendering:optimizeLegibility; 
+    text-transform:none; 
+}
+
+@mixin h4 {
+    margin-bottom:0.2em;  
+    color:$c-h4;
+    font-family:$f-stack-sans; 
+    font-size:14px; 
+    font-weight:bold; 
+    font-style:normal; 
+    line-height:$line-height; 
+    text-rendering:optimizeSpeed; 
+    text-transform:uppercase; 
+}
+
+@mixin h5 { }
+
+@mixin h6 { }

@@ -1,0 +1,83 @@
+/**
+* Gravity Department
+*
+* @author     Brendan Falkowski (http://gravitydept.com)
+* @copyright  Copyright 2014 Gravity Department
+* @license    All rights reserved.
+*/
+
+
+// ==============================================
+// Pattern Library
+// ==============================================
+
+.pattern-library-wrapper { }
+
+.container { 
+    
+}
+
+.pattern-library-header { 
+    overflow:hidden;
+    margin-bottom:30px;
+    padding:0 15px;
+    background:#333;
+    color:#FFF;
+    font-family:'Helvetica Neue', arial, sans-serif;
+    font-size:16px;
+    font-weight:300;
+    line-height:1.2;
+}
+
+.pattern-library-header a { 
+    float:left;
+    padding:0 10px;
+    color:#FFF;
+    opacity:0.75;
+    line-height:40px;
+}
+
+.pattern-library-header a:first-child { 
+    opacity:1;
+}
+
+.pattern-library-header a:hover { 
+    background:#555;
+    opacity:1;
+}
+
+
+// ----------------------------------------------
+// Page Title
+
+.pattern-library-page-title { 
+    margin-bottom:30px;
+    color:#333;
+    font-family:'Helvetica Neue', arial, sans-serif;
+    font-size:48px;
+    font-weight:bold;
+    line-height:1.2;
+}
+
+
+// ----------------------------------------------
+// Section
+
+.pattern-library-section { 
+    margin-bottom:70px;
+}
+
+
+// ----------------------------------------------
+// Section Title
+
+.pattern-library-title { 
+    margin-bottom:30px;
+    padding:10px 15px;
+    background:#333;
+    color:#FFF;
+    font-family:'Helvetica Neue', arial, sans-serif;
+    font-size:24px;
+    font-weight:300;
+    line-height:1.2;
+}

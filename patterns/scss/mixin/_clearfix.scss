@@ -1,0 +1,18 @@
+/**
+* Gravity Department
+*
+* @author     Brendan Falkowski (http://gravitydept.com)
+* @copyright  Copyright 2014 Gravity Department
+* @license    All rights reserved.
+*/
+
+
+// ==============================================
+// Mixin - Clearfix
+// ==============================================
+
+@mixin clearfix {
+    content:'';
+    display:table;
+    clear:both;
+}

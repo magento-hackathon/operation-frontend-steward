@@ -1,0 +1,316 @@
+/**
+* Gravity Department
+*
+* @author     Brendan Falkowski (http://gravitydept.com)
+* @copyright  Copyright 2014 Gravity Department
+* @license    All rights reserved.
+*/
+
+
+// ==============================================
+// Compass Defaults
+// ==============================================
+
+// Border Radius
+
+$default-border-radius: 5px;
+
+// Transition
+
+$default-transition-property: all;
+$default-transition-duration: 200ms;
+$default-transition-function: linear;
+$default-transition-delay:    0;
+
+
+
+// ==============================================
+// Base Values
+// ==============================================
+
+
+// ----------------------------------------------
+// Units
+
+// Hex is the percentage difference between 101010 and 202020.
+// Used with Sass functions darken() and lighten().
+$hex: 6.1%;
+
+
+// ----------------------------------------------
+// Spacing
+
+// Gap is the standard vertical spacing between modules.
+$gap: 30px;
+
+// Trim is the whitespace between the content and viewport edge.
+$trim: 12px;
+
+// Liner is the whitespace between the content box and content.
+$liner: 12px;
+
+
+// ----------------------------------------------
+// Dimensions - Max
+
+$max-content-width:       1250px;
+$max-container-width:     $trim + $max-content-width + $trim;
+$max-std-formatted-width: 50em;
+
+
+// ----------------------------------------------
+// Dimensions - Header
+
+$header-element-height: 46px;
+
+$header-primary-small-height: (50px + 1px);
+$header-primary-large-height: (100px + 1px);
+$header-primary-large-vertical-offset: (($header-primary-large-height - 1px - $header-element-height) / 2);
+
+$header-secondary-height: (46px + 1px);
+
+
+
+// ==============================================
+// Brand / Site Colors
+// ==============================================
+
+// Usually not used directly in Sass partials.
+// Only used to define context-based color vars in this file.
+
+$c-blue:         #0368B3;
+$c-blue-bright:  #0080DF;
+$c-green:        #048C49;
+$c-orange:       #FC6D1E;
+$c-red:          #DF3100;
+$c-yellow:       #ECDA00;
+$c-yellow-light: #FFF5E3;
+
+
+
+// ==============================================
+// Base Colors
+// ==============================================
+
+
+// ----------------------------------------------
+// Text
+
+$c-text:        #505050;
+$c-text-subtle: #909090;
+
+$c-text-contrast:        #FFF;
+$c-text-contrast-subtle: #C0C0C0;
+
+
+// ----------------------------------------------
+// Interaction
+
+$c-action:   $c-blue-bright;
+$c-stimulus: darken($c-blue-bright, 4%);
+$c-subtle:   #A0A0A0;
+
+$c-action-secondary:   $c-green;
+$c-stimulus-secondary: darken($c-green, 4%);
+
+
+// ----------------------------------------------
+// Notification States
+
+$c-danger:   $c-red;
+$c-security: #E0F2FF;
+$c-success:  $c-green;
+$c-warn:     $c-yellow;
+
+
+
+// ==============================================
+// Element Colors
+// ==============================================
+
+
+// ----------------------------------------------
+// Buttons
+
+$c-button:        $c-blue-bright;
+$c-button-hover:  darken($c-blue-bright, 4%);
+$c-button-active: darken($c-blue-bright, $hex);
+
+$c-button-danger:        $c-danger;
+$c-button-danger-hover:  darken($c-danger, 4%);
+$c-button-danger-active: darken($c-danger, $hex);
+
+$c-button-disabled:      #E4E4E4;
+$c-button-disabled-text: #A4A4A4;
+
+$c-button-priority:        $c-green;
+$c-button-priority-hover:  darken($c-green, 4%);
+$c-button-priority-active: darken($c-green, $hex);
+
+$c-button-subtle:        #808080;
+$c-button-subtle-hover:  darken(#808080, 4%);
+$c-button-subtle-active: darken(#808080, $hex);
+
+
+// ----------------------------------------------
+// Footer
+
+//$c-footer-background: #EFEFEF; [refactor]
+$c-footer-background: #808080;
+//$c-footer-border:     #DBDBDB; [refactor]
+$c-footer-border:     #505050;
+
+
+// ----------------------------------------------
+// Forms
+
+$c-fieldset-border: #C0C0C0;
+
+$c-input-border:          #A0A0A0;
+$c-input-border-contrast: #202020;
+$c-input-border-focus:    #0368B3;
+
+$c-input-placeholder: $c-text-subtle;
+$c-input-text:        $c-text;
+
+
+// ----------------------------------------------
+// Header
+
+$c-header-primary-background: $c-blue;
+
+//$c-header-secondary-background: #EFEFEF; [refactor]
+$c-header-secondary-background: #FFF;
+//$c-header-secondary-border:     #DBDBDB; [refactor]
+$c-header-secondary-border:     #C0C0C0;
+
+
+// ----------------------------------------------
+// Headings
+
+$c-h1: $c-text;
+$c-h2: $c-text;
+$c-h3: $c-text;
+$c-h4: $c-text;
+$c-h5: $c-text;
+$c-h6: $c-text;
+
+
+// ----------------------------------------------
+// Link
+
+$c-link:        $c-blue-bright;
+$c-link-hover:  darken($c-blue-bright, 4%);
+$c-link-focus:  darken($c-blue-bright, 4%);
+$c-link-active: darken($c-blue-bright, $hex);
+
+$c-link-contrast:        lighten($c-link, 20%);
+$c-link-contrast-hover:  lighten($c-link, 10%);
+$c-link-contrast-focus:  lighten($c-link, 10%);
+$c-link-contrast-active: lighten($c-link, 20%);
+
+
+// ----------------------------------------------
+// Module
+
+$c-module-background: #F4F4F4;
+
+$c-module-border: #C0C0C0;
+$c-module-border-subtle: #E0E0E0;
+
+$c-module-divider: #E0E0E0;
+
+
+// ----------------------------------------------
+// Module (contrast)
+
+$c-module-contrast-background: #4E4E4E;
+$c-module-contrast-border: darken($c-module-contrast-background, 10%);
+
+
+// ----------------------------------------------
+// Module (emphasis)
+
+$c-module-emphasis-background: #E8E8E8;
+$c-module-emphasis-border: #C0C0C0;
+
+
+// ----------------------------------------------
+// Module (priority)
+
+$c-module-priority-background: $c-yellow-light;
+
+
+// ----------------------------------------------
+// Social Networks
+
+$c-facebook:    #3B5998;
+$c-google-plus: #E04B31;
+$c-pinterest:   #DE2108;
+$c-tumblr:      #2C4762;
+$c-twitter:     #00ACED;
+$c-vk:          #567DA4;
+$c-weibo:       #EBDBC4;
+
+
+// ----------------------------------------------
+// Table
+
+$c-table-background: #F4F4F4;
+$c-table-border:     #C0C0C0;
+
+$c-table-zebra-odd:  #FFF;
+$c-table-zebra-even: #F4F4F4;
+
+
+// ----------------------------------------------
+// Tabs
+
+$c-tabs-background: #E8E8E8;
+$c-tabs-border: #C0C0C0;
+
+
+
+// ==============================================
+// Typography
+// ==============================================
+
+// Web fonts are loaded from a template.
+// See: /template/gravdept/page/html/web-font-loader.phtml
+
+
+// ----------------------------------------------
+// Font Stacks
+
+$f-stack-sans:    'proxima-nova', 'Helvetica Neue', arial, sans-serif;
+$f-stack-serif:   'Georgia', serif;
+$f-stack-special: 'proxima-nova', 'Helvetica Neue', arial, sans-serif;
+
+$f-stack-helvetica: 'Helvetica Neue', helvetica, arial, sans-serif;
+
+$f-stack-default: $f-stack-sans;
+
+
+// ----------------------------------------------
+// Font Sizes
+
+$f-size-xxl: 24px;
+$f-size-xl:  20px;
+$f-size-l:   18px;
+
+$f-size: 16px;
+
+$f-size-s:     15px;
+$f-size-xs:    14px;
+$f-size-xxs:   13px;
+$f-size-xxxs:  12px;
+$f-size-xxxxs: 11px;
+
+
+// ----------------------------------------------
+// Base Measures
+
+$line-height: 1.5;
+$margin-bottom: 1.5em;
+
+

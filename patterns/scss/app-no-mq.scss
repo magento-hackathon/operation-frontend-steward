@@ -1,0 +1,22 @@
+/**
+* Gravity Department
+*
+* @author     Brendan Falkowski (http://gravitydept.com)
+* @copyright  Copyright 2014 Gravity Department
+* @license    All rights reserved.
+*/
+
+
+// ==============================================
+// Use conditional breakpoint mixin for "lte IE8" render applicable content from media queries only.
+// See: /scss/mixin/_breakpoint.scss
+// ==============================================
+
+$mq-support: false;
+$mq-fixed-value: 1024px;
+
+// Temporarily disable compilation of fallback stylesheet for non-'media query' browsers.
+//@import "app-loader";
+
+// IE8 and below fixes
+//@import "override/lte-ie8";

@@ -1,0 +1,158 @@
+/**
+* Gravity Department
+*
+* @author     Brendan Falkowski (http://gravitydept.com)
+* @copyright  Copyright 2014 Gravity Department
+* @license    All rights reserved.
+*/
+
+
+// ==============================================
+// Tables - Core
+// ==============================================
+
+.hide-th { 
+    text-indent:-9999px; 
+}
+
+
+// ----------------------------------------------
+// Responsive table groups
+
+.data-g1 { 
+    display:table-cell; 
+}
+
+.data-g2,
+.data-g3,
+.data-g4 { 
+    display:none;
+}
+
+
+// ----------------------------------------------
+// Responsive table priorities
+
+.data-p1 { 
+    display:table-cell;
+}
+
+.data-p2,
+.data-p3,
+.data-p4 {
+    display:none; 
+}
+
+
+
+// ==============================================
+// Data Table
+// ==============================================
+
+.data-table { 
+    width:100%;
+    margin-bottom:$margin-bottom; 
+    font-size:$f-size-s;
+}
+
+.data-table td,
+.data-table th { 
+    padding:8px; 
+    border:1px solid $c-table-border;
+    vertical-align:top; 
+}
+
+.data-table th { 
+    background:$c-table-background; 
+    font-weight:bold;
+    white-space:nowrap;
+}
+
+.data-table tfoot tr { 
+    background:$c-table-background;
+}
+
+
+
+// ==============================================
+// Linearize Table
+// ==============================================
+
+@include bp (max-width, 599px) {
+
+    .linearize-table {
+        border-width:0 0 1px;
+    }
+
+    .linearize-table tr,
+    .linearize-table th,
+    .linearize-table td { 
+        display:block; 
+    }
+
+    // THEAD
+
+    .linearize-table thead { 
+        display:none;
+    }
+
+    // TBODY - TR
+
+    .linearize-table tbody tr { 
+        position:relative;
+    }
+
+    /*
+    .linearize-table tbody tr:nth-child(odd) { 
+        background:$c-table-zebra-odd;
+    }
+
+    .linearize-table tbody tr:nth-child(even) { 
+        background:$c-table-zebra-even;
+    }
+    */
+
+    // TBODY - TD
+
+    .linearize-table tbody td { 
+        padding:0 0 15px; 
+        border:0;
+    }
+
+
+    .linearize-table tbody td:first-child { 
+        padding-top:15px; 
+        border-top:1px solid $c-table-border;
+    }
+
+    // Helpers
+
+    .linearize-table .linearize-hide { 
+        display:none;
+    }
+
+    .linearize-table .linearize-unpad { 
+        padding:0;
+    }
+
+    .linearize-table .linearize-show { 
+        display:block;
+    }
+
+    // At "min-width: 600px" there is another helper ".linearize-collapse".
+    // For holding duplicated content that is hidden in the full table.
+
+}
+
+// ----------------------------------------------
+
+@include bp (min-width, 600px) {
+
+    // Hide a region that is only visible under 599px
+    .linearize-table .linearize-collapse { 
+        display:none;
+    }
+    
+}
+
+
