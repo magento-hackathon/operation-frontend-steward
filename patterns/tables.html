@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]> <html lang="en" id="top" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" id="top" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" id="top" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" id="top" class="no-js ie9"> <![endif]-->   
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" id="top" class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    
+    <title>Frontend Steward - Pattern Library</title>
+    
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    
+    <link rel="stylesheet" type="text/css" href="css/app-mq.css" media="all" />
+
+    <script type="text/javascript" src="js/modernizr.custom.min.js"></script>
+    
+    <!--[if lte IE 8]>
+        <script type="text/javascript" src="js/selectivizr.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="pattern-library-header">
+    <a href="index.html">Pattern Library</a>
+    <a href="forms.html">Forms</a>
+    <a href="tables.html">Tables</a>
+    <a href="typography.html">Typography</a>
+    <a href="user-interface.html">User Interface</a>
+</div>
+
+<div class="pattern-library-wrapper">
+    <div class="container">
+        <div class="pattern-library-page-title">Tables</div>
+
+
+<!-- SECTION ******************************************** -->
+
+
+<section class="pattern-library-section" id="section1">
+    <div class="pattern-library-title">Table - Data</div>
+
+    <p>
+        Core table style.
+        Compresses fluidly for small screens.
+        Example: my orders, checkout summary.
+    </p>
+
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Order #</th>
+                <th>Total</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        
+        <tfoot>
+            <tr>
+                <td colspan="3"><a href="#" class="button button-micro button-subtle">Some Action</a></td>
+            </tr>
+        </tfoot>
+
+        <tbody>
+            <tr>
+                <td>100000133</td>
+                <td><span class="price">$2,950.75</span></td>
+                <td>Complete</td>
+            </tr>
+            
+            <tr>
+                <td>100000131</td>
+                <td><span class="price">$80.76</span></td>
+                <td>Pending</td>
+            </tr>
+            
+            <tr>
+                <td>100000108</td>
+                <td><span class="price">$62.51</span></td>
+                <td>Pending</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+<!-- SECTION ******************************************** -->
+
+
+    </div>
+</div>    
+
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/fastclick.js"></script>
+<script src="js/enquire.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
