@@ -1,5 +1,9 @@
 # Operation Frontend Steward
 
+*Update [2014-02-05] — We are working on finishing and migrating all the artifacts produced for Operation Frontend Steward into this repo. The repo is mostly bare currently. Please be patient, and we'll tweet hard when it's public.*
+
+## Project Charter
+
 Operation Frontend Steward is a four-pronged offense to improve Magento 2's frontend:
 
 1. Define strategic overarching principles Magento 2's frontend needs to uphold (think "10 commandments").
