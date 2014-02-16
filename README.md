@@ -30,6 +30,9 @@ Operation Frontend Steward is a four-pronged offense to improve Magento 2's fron
 1. [Invest in Magento's frontend patterns. Stay lean and framework agnostic](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/principles/README.md#3-invest-in-magentos-frontend-patterns-stay-lean-and-framework-agnostic)
 1. [Treat frontend performance as the bottleneck it is compared to backend performance](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/principles/README.md#4-treat-frontend-performance-as-the-bottleneck-it-is-compared-to-backend-performance)
 1. [Use tools to evaluate and test frontend code quality](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/principles/README.md#5-use-tools-to-evaluate-and-test-frontend-code-quality)
+1. [Decouple HTML, CSS and JS from PHP classes](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/principles/README.md#6-decouple-html-css-and-js-from-php-classes)
+1. [Decouple visual (CSS) layer from the functional (JavaScript) layer](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/principles/README.md#7-decouple-visual-css-layer-from-the-functional-javascript-layer)
+1. [Decouple functional (JavaScript) layer from the markup (HTML)](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/principles/README.md#8-decouple-functional-javascript-layer-from-the-markup-html)
 
 ### [Proposals](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/proposals/README.md)
 

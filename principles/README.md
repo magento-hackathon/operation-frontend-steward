@@ -111,7 +111,7 @@ Most importantly, CSS is always the implementation’s domain and not the core f
 
 ---
 
-## 6. Reinstate emphasis on decoupling HTML, CSS and JS from PHP classes.
+## 6. Decouple HTML, CSS and JS from PHP classes.
 
 TBD
 
