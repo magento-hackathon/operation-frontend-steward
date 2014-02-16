@@ -4,7 +4,7 @@
 
 ---
 
-Operation Frontend Steward is a four-pronged offense to improve Magento 2's frontend:
+**Operation Frontend Steward is a four-pronged offense to improve Magento 2's frontend:**
 
 1. Define strategic overarching principles Magento 2's frontend needs to uphold (think "10 commandments").
 1. Create public documentation of frontend patterns used in Magento 2.
@@ -15,7 +15,7 @@ Operation Frontend Steward is a four-pronged offense to improve Magento 2's fron
 
 ## Table of Contents
 
-### [Project Charter](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/charter/README.md)
+### [Project Charter](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/charter/README.md) — The Origin Story
 
 1. [Why it matters](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/charter/README.md#why-it-matters)
 1. [Proposed schedule of events](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/charter/README.md#proposed-schedule-of-events)
@@ -23,7 +23,7 @@ Operation Frontend Steward is a four-pronged offense to improve Magento 2's fron
 1. [Out of scope](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/charter/README.md#out-of-scope)
 1. [Project info](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/charter/README.md#project-info)
 
-### [Principles](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/principles/README.md)
+### [Principles](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/principles/README.md) — Overarching Frontend Goals
 
 1. [The perfect CMS does not constrain or coerce its frontend output](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/principles/README.md#1-the-perfect-cms-does-not-constrain-or-coerce-its-frontend-output)
 1. [The core frontend package cannot be Magento's demo](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/principles/README.md#2-the-core-frontend-package-cannot-be-magentos-demo)
@@ -34,7 +34,7 @@ Operation Frontend Steward is a four-pronged offense to improve Magento 2's fron
 1. [Decouple visual (CSS) layer from the functional (JavaScript) layer](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/principles/README.md#7-decouple-visual-css-layer-from-the-functional-javascript-layer)
 1. [Decouple functional (JavaScript) layer from the markup (HTML)](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/principles/README.md#8-decouple-functional-javascript-layer-from-the-markup-html)
 
-### [Proposals](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/proposals/README.md)
+### [Proposals](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/proposals/README.md) — Major Technical Shifts Needed in Magento 2
 
 1. [Mobile First](01-mobile-first.md) — Adopt a mobile-first methodology across the design system.
 1. [Atomic Templates](02-atomic-templates.md) — Write templates atomically to contain the smallest possible output.
@@ -51,6 +51,8 @@ Use (RequireJS) or (Browserify) not (HeadJS) for JS loading architecture.
 ---
 
 ## Contributors
+
+This resource was entirely community-driven, and was created during (and after) the January 2014 Magento Hackathon: http://www.mage-hackathon.de/passed/online-hackathon-worldwide-31st-jan-1st-feb.html
 
 * David Alger @ http://www.classyllama.com
 * Kris Brown @ http://www.briteskies.com
