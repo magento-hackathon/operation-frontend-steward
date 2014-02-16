@@ -71,7 +71,7 @@ From the Alexa top 50,000 sites just 13% of page load time was on the backend. 8
 
 * 10% backend improvement = 0.13 seconds faster load
 * 10% frontend improvement = 0.87 seconds faster load
-Frontend improvements have 6.7x more impact on every page load
+* Frontend improvements have 6.7x more impact on every page load
 
 **Magento must prioritize projects that improve frontend performance.** Performance is a design constraint, and a bad frontend undermines the perfect backend. There are dozens of small, simple tweaks with measurable performance gains. The biggest violators today are JavaScript architecture and images.
 

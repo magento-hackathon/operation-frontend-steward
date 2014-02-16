@@ -1,8 +1,8 @@
 # Operation Frontend Steward
 
-*Update [2014-02-05] — We are working on finishing and migrating all the artifacts produced for Operation Frontend Steward into this repo. The repo is mostly bare currently. Please be patient, and we'll tweet hard when it's public.*
+*Update [2014-02-16] — Many (but not all) of the artifacts produced for Operation Frontend Steward have been migrated into this repo.*
 
-## Project Charter
+*We are working directly with Magento 2's product teams to ensure these concerns are addressed within the product. We are preparing a survey for partners and independent developers to provide feedback to Magento on each issue. Please read through the articles and we'll let you know when the survey is ready.*
 
 Operation Frontend Steward is a four-pronged offense to improve Magento 2's frontend:
 
@@ -11,33 +11,33 @@ Operation Frontend Steward is a four-pronged offense to improve Magento 2's fron
 1. Refactor outdated, ignored, and abused frontend code with standardized, lean, extensible, and future-friendly code.
 1. Propose frontend architectural changes outside the Hackaton's scope to modernize Magento 2.
 
-## Why it matters
+---
 
-This project is necessary because Magento's development is to this day dominated by backend engineering. This is observable in the neglect of modernizing Magento 1's frontend between 2009–2014, and the lateral-at-best frontend changes to date in Magento 2. With responsive design eating other mobile / multi-device strategies, the role of a highly engineered frontend codebase has never been more critcal.
+## Table of Contents
 
-What are the odds of a product rebuilt from the group up but designed desktop-first in 2014 surviving another 5 years? Take your bets.
+### [Project Charter](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/charter/README.md)
 
-## Proposed schedule of events
+1. [Why it matters](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/charter/README.md#why-it-matters)
+1. [Proposed schedule of events](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/charter/README.md#proposed-schedule-of-events)
+1. [This project's audience](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/charter/README.md#this-projects-audience)
+1. [Out of scope](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/charter/README.md#out-of-scope)
+1. [Project info](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/charter/README.md#project-info)
 
-1. Make an inventory of all issues, idiosyncrasies, gotchas, obsolete, redundant, overly prescribed, and good patterns in Magento's frontend.
-1. Categorize all suggestions and prioritize them.
-1. Split into three groups: documentors, refactorers, and strategizers to tackle the four objectives of Operation Frontend Steward.
+---
 
+### [Principles](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/principles/README.md)
 
-## This project's audience
+---
 
-This project is concerned with any suggestions which enable interaction designers, UX designers, frontend developers, information architects, and content strategists to do the best work possible using Magento. Those people all serve users.
+### [Proposals](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/proposals/README.md)
 
-## Out of Scope
+---
 
-There are two things this project is not:
+## Contributors
 
-1. Building yet another theme. Magento does not need more themes, it needs a better core frontend. The core must not be slanted for Magento's demos but rather be the most neutral base for implementors.
-1. Adding responsive design / mobile support. These are not "features". Doing them well **requires** consideration of the client's unique goals and constraints, and that is predicated on having an unobtrusive frontend core as a foundation. The cart goes after the horse.
-
-I am wholeheartedly concerned with both these things, but today I think the best way Magento can handle them is by addressing the foundational changes necessary to make them more approachable for new developers and easier to maintain for complex implementations.
-
-## Project Info
-
-* Submitted by: Brendan Falkowski @ http://gravitydept.com
-* Timezone: US Eastern (GMT -5)
+* David Alger @ http://www.classyllama.com
+* Kris Brown @ http://www.briteskies.com
+* Brendan Falkowski @ http://gravitydept.com (Project Lead)
+* Erik Hansen @ http://www.classyllama.com
+* Tom Robertshaw @ https://www.meanbee.com
+* Kimberely Thomas @ http://www.redlightblinking.com
