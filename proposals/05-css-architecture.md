@@ -11,20 +11,15 @@ See Magento 2 Wiki, Section A.1.2 https://wiki.magento.com/display/MAGE2DOC/Mage
 There are significant architectural issues with authoring classes and selectors this way in a complex design system:
 
 1. Chaining classes is less performant. Rendering engines read selectors from right to left, so the renderer must consider applying any style matched to the “product” class to over half the elements in the markup. This rendering calculation must be completed before any dimensional calculation can take place, and that means that visually the page does not stop rendering until the operation is complete.
-
-2. Using single-word class names to chain selectors increases likelihood of accidental collisions with other modules and especially third-party code. Example: many modules could use a selector like “.description” or “.name” because they are so broad / general. Even with specific scoping in other modules, and styles applied to that global selector will be inherited by all other uses of the class. This leads to more attribute than are necessary in scoped selectors to override the cascaded attributes. The result is harder to maintain, increased bloat, and lower extensibility. It is harmful to be excessively generic with class names.
-
-3. Chaining classes in a selector rapidly increases the specificity of that selector. This makes variations on an element more difficult to override and contributes to specificity escalation killing the cascading nature of CSS:
-
+1. Using single-word class names to chain selectors increases likelihood of accidental collisions with other modules and especially third-party code. Example: many modules could use a selector like “.description” or “.name” because they are so broad / general. Even with specific scoping in other modules, and styles applied to that global selector will be inherited by all other uses of the class. This leads to more attribute than are necessary in scoped selectors to override the cascaded attributes. The result is harder to maintain, increased bloat, and lower extensibility. It is harmful to be excessively generic with class names.
+1. Chaining classes in a selector rapidly increases the specificity of that selector. This makes variations on an element more difficult to override and contributes to specificity escalation killing the cascading nature of CSS:
     * Classes are chained together to override a base class.
     * Parent classes are added to override the chained class.
     * Direct descendent selectors are added, which undesirably bind the selector to the markup structure.
     * An ID is added to the selector to overpower all the chained and familial specificity.
     * Finally, to override the ID it becomes necessary to use !important or inline styles.
-
-That specificity war doesn’t need to start if the base classes are engineered to take advantage of CSS’ natural inheritance and cascade.
-
-4. From a workflow perspective, it’s often necessary to find all uses of a particular class value within a project. With chained selectors having class values like “products list items”, you can search for “products list” but not “products items”. A better class value would be “products-list products-items” (although this is redundant) because it would allow you to search on either term. The classes “products” or “list” or “items” are too generic to search for globally within a project.
+1. That specificity war doesn’t need to start if the base classes are engineered to take advantage of CSS’ natural inheritance and cascade.
+1. From a workflow perspective, it’s often necessary to find all uses of a particular class value within a project. With chained selectors having class values like “products list items”, you can search for “products list” but not “products items”. A better class value would be “products-list products-items” (although this is redundant) because it would allow you to search on either term. The classes “products” or “list” or “items” are too generic to search for globally within a project.
 
 ### Example (from Magento 2 markup)
 
