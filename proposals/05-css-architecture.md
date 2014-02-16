@@ -21,7 +21,7 @@ There are significant architectural issues with authoring classes and selectors 
 1. That specificity war doesn’t need to start if the base classes are engineered to take advantage of CSS’ natural inheritance and cascade.
 1. From a workflow perspective, it’s often necessary to find all uses of a particular class value within a project. With chained selectors having class values like “products list items”, you can search for “products list” but not “products items”. A better class value would be “products-list products-items” (although this is redundant) because it would allow you to search on either term. The classes “products” or “list” or “items” are too generic to search for globally within a project.
 
-### Example (from Magento 2 markup)
+### Problems in Magento 2
 
 The examples presented in the Magento 2 Wiki (A.1.2) do not accurately reflect how classes are used to build extensible design systems.
 
