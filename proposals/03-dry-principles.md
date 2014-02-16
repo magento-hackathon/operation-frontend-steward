@@ -27,6 +27,8 @@ The trivial changes demonstrate the importance of the not having duplicate conte
 
 ### Improvement
 
-If the ```downloadable``` module needs to add a few lines to the cart renderer, do not duplicate the entire renderer template.
+If the ```bundle``` and ```downloadable``` modules need to add a few lines to the ```checkout``` cart renderer, do not duplicate the entire renderer template.
 
-Just modify the cart renderer with a fragment template that conditionally renders based on the product type. For non-core modules, a third-party could use a generic layout container into which new blocks could be inserted.
+Just modify the ```checkout``` cart renderer with a fragment template that conditionally renders based on the product type. 
+
+For non-core modules, a third-party could make use of a generic layout container into which new blocks could be inserted. Magento should not use them though, all core templates should be explicitly inserted for clarity.
