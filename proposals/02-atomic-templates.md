@@ -178,7 +178,8 @@ From this simple example, it's obvious how much code could be put out of the mai
 
 It must implement a design architecture which facilitates decomposition and reconstruction as efficiently as possible. This also minimizes that amount of code which is drawn into themes (and thus maintenance).
 
-**Further reading**
+##### Further reading
+
 * http://bradfrostweb.com/blog/post/atomic-web-design/ 
 * http://www.slideshare.net/bradfrostweb/atomic-design
 * http://vimeo.com/67476280
