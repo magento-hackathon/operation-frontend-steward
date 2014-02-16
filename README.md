@@ -25,21 +25,25 @@ Operation Frontend Steward is a four-pronged offense to improve Magento 2's fron
 
 ### [Principles](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/principles/README.md)
 
-
+1. [The perfect CMS does not constrain or coerce its frontend output](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/principles/README.md#1-the-perfect-cms-does-not-constrain-or-coerce-its-frontend-output)
+1. [The core frontend package cannot be Magento's demo](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/principles/README.md#2-the-core-frontend-package-cannot-be-magentos-demo)
+1. [Invest in Magento's frontend patterns. Stay lean and framework agnostic](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/principles/README.md#3-invest-in-magentos-frontend-patterns-stay-lean-and-framework-agnostic)
+1. [Treat frontend performance as the bottleneck it is compared to backend performance](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/principles/README.md#4-treat-frontend-performance-as-the-bottleneck-it-is-compared-to-backend-performance)
+1. [Use tools to evaluate and test frontend code quality](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/principles/README.md#5-use-tools-to-evaluate-and-test-frontend-code-quality)
 
 ### [Proposals](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/proposals/README.md)
 
-* [1. Mobile First](01-mobile-first.md) — Adopt a mobile-first methodology across the design system.
-* [2. Atomic Templates](02-atomic-templates.md) — Write templates atomically to contain the smallest possible output.
-* [3. DRY Principles](03-dry-principles.md) — Embrace DRY (Don't Repeat Yourself) principles consistently.
-* [4. Checkout UX](04-checkout-ux.md) — Use (Woven Checkout) not (Accordion + Sidebar) for OnePageCheckout.
-* [5. CSS Architecture](05-css-architecture.md) — Write HTML classes for (OO-CSS) not (chained-classes CSS).
-* [6. CSS Pre-Processors](06-css-pre-processors.md) — Use (Sass + Compass) not (LESS) for CSS pre-processing.
-* [7. JavaScript Architecture](07-javascript-architecture.md)
+1. [Mobile First](01-mobile-first.md) — Adopt a mobile-first methodology across the design system.
+1. [Atomic Templates](02-atomic-templates.md) — Write templates atomically to contain the smallest possible output.
+1. [DRY Principles](03-dry-principles.md) — Embrace DRY (Don't Repeat Yourself) principles consistently.
+1. [Checkout UX](04-checkout-ux.md) — Use (Woven Checkout) not (Accordion + Sidebar) for OnePageCheckout.
+1. [CSS Architecture](05-css-architecture.md) — Write HTML classes for (OO-CSS) not (chained-classes CSS).
+1. [CSS Pre-Processors](06-css-pre-processors.md) — Use (Sass + Compass) not (LESS) for CSS pre-processing.
+1. [JavaScript Architecture](07-javascript-architecture.md)
 Use (RequireJS) or (Browserify) not (HeadJS) for JS loading architecture.
-* [8. Responsive Images](08-responsive-images.md) — Use (PictureFill) and plan for the technology to change.
-* [9. Retina Icons](09-retina-icons.md) — Use (SVG Sprites + PNG Fallback) or (Retina PNG Sprites) not (Icon Fonts) for graphical icons.
-* [10. Comments](10-comments.md) — Write comments in code, and sign comments as Magento.
+1. [Responsive Images](08-responsive-images.md) — Use (PictureFill) and plan for the technology to change.
+1. [Retina Icons](09-retina-icons.md) — Use (SVG Sprites + PNG Fallback) or (Retina PNG Sprites) not (Icon Fonts) for graphical icons.
+1. [Comments](10-comments.md) — Write comments in code, and sign comments as Magento.
 
 ---
 
