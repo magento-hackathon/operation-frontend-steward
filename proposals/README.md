@@ -31,7 +31,7 @@ Use (RequireJS) or (Browserify) not (HeadJS) for JS loading architecture.
 Use (PictureFill) and plan for the technology to change.
 
 ## [9. Retina Icons](09-retina-icons.md)
-Use (SVG Sprites + PNG Fallback) or (Retina PNG Sprites) not (Icon Fonts) for graphical icons.
+Use (SVG Sprites + PNG Fallback) or (Retina PNG Sprites) not (Icon Fonts) for icons.
 
 ## [10. Comments](10-comments.md)
 Write comments in code, and sign comments as Magento.

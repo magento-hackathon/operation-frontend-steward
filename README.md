@@ -1,8 +1,8 @@
 # Operation Frontend Steward
 
-*Update [2014-02-16] — Many (but not all) of the artifacts produced for Operation Frontend Steward have been migrated into this repo.*
+*Update [2014-02-16] — Many (but not all) of the artifacts produced for Operation Frontend Steward have been migrated into this repo. We are working directly with Magento 2's product teams to ensure these concerns are addressed within the product. We are preparing a survey for partners and independent developers to provide feedback to Magento on each issue. Please read through the articles and we'll let you know when the survey is ready.*
 
-*We are working directly with Magento 2's product teams to ensure these concerns are addressed within the product. We are preparing a survey for partners and independent developers to provide feedback to Magento on each issue. Please read through the articles and we'll let you know when the survey is ready.*
+---
 
 Operation Frontend Steward is a four-pronged offense to improve Magento 2's frontend:
 
@@ -42,7 +42,7 @@ Operation Frontend Steward is a four-pronged offense to improve Magento 2's fron
 1. [JavaScript Architecture](07-javascript-architecture.md)
 Use (RequireJS) or (Browserify) not (HeadJS) for JS loading architecture.
 1. [Responsive Images](08-responsive-images.md) — Use (PictureFill) and plan for the technology to change.
-1. [Retina Icons](09-retina-icons.md) — Use (SVG Sprites + PNG Fallback) or (Retina PNG Sprites) not (Icon Fonts) for graphical icons.
+1. [Retina Icons](09-retina-icons.md) — Use (SVG Sprites + PNG Fallback) or (Retina PNG Sprites) not (Icon Fonts) for icons.
 1. [Comments](10-comments.md) — Write comments in code, and sign comments as Magento.
 
 ---

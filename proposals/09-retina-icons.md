@@ -1,6 +1,6 @@
 # Retina Icons
 
-## Use (SVG Sprites + PNG Fallback) or (Retina PNG Sprites) not (Icon Fonts) for graphical icons.
+## Use (SVG Sprites + PNG Fallback) or (Retina PNG Sprites) not (Icon Fonts) for icons.
 
 Icon Fonts are used heavily in Magento 2 to render what are traditionally image-based graphics with resolution independence.
 
