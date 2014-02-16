@@ -4,9 +4,9 @@
 
 Magento should write comments in XML an PHTML templates to make it easier for developers to understand non-obvious things like:
 
-Which configurations trigger different states.
-Edge cases (ex: not enough inventory to fulfill order).
-Dependencies from other modules or templates (ex: expecting form parent or global var).
+* Which configurations trigger different states.
+* Edge cases (ex: not enough inventory to fulfill order).
+* Dependencies from other modules or templates (ex: expecting form parent or global var).
 
 In PHTML templates, comments must always be written in PHP comments using single-line syntax so users never download them, and they can easily be spanned with multi-line comments.
 
