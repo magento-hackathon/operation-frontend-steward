@@ -12,7 +12,8 @@ This is hard to describe without examples, but I’ll try to keep them relativel
 
 In Magento 1.x, heavily modifying the product view is a mess because the ```catalog/product/view.phtml``` template contains a significant amount of variability between product types and a great deal of logic spills out into conditionally rendering child templates. This manifests as a problem when components that should be independent like “price box(es)”, “inventory status”, “quantity input”, or “add-to actions” render in different templates within the same parent depending on the product type.
 
-**Original (excerpt)**
+#### Original Magento Code (excerpt)
+
 *File: /app/design/frontend/base/default/template/catalog/product/view.phtml*
 
 ```php
@@ -50,16 +51,16 @@ In Magento 1.x, heavily modifying the product view is a mess because the ```cata
 </ul>
 ```
 
-**Improvement**
+#### Rewritten with Atomic Templates
 
-Magento would be significantly more extensible if individual components were broken off into templates. Each child template would contain all the conditional logic to render that content depending on the product type — rather than the parent (view.phtml).
+Magento would be significantly more extensible if individual components were broken off into templates. Each child template would contain all the conditional logic to render that content depending on the product type — rather than the parent (```view.phtml```).
 
 This has two major benefits:
 
-1. The parent template (view.phtml) becomes a logic-less layer used purely for markup structure. You can completely re-arrange all the child templates without writing deeply nested conditionals to span gaps between product types.
-1. Maintenance is drastically decreased because you only have to maintain the child templates that required modifications and the parent template (view.phtml).
+1. The parent template (```view.phtml```) becomes a logic-less layer used purely for markup structure. You can completely re-arrange all the child templates without writing deeply nested conditionals to span gaps between product types.
+1. Maintenance is drastically decreased because you only have to maintain the child templates that required modifications and the parent template (```view.phtml```).
 
-Atomic Files:
+Deconstructed into more atomic files:
 
 ```
 /app/design/frontend/base/default/template/catalog/product/view.phtml
@@ -94,7 +95,7 @@ Or this equally viable markup pattern:
 </div>
 ```
 
-Note: that by componentizing content into minimal templates restructuring the markup is trivial.
+By deconstructing content into atomic templates restructuring the markup becomes trivially easy.
 
 ### Example B: Cart Items Table
 
@@ -107,9 +108,9 @@ The cart items table is another example where a monster template creates a major
 
 In a responsive site, a mobile-first approach quickly breaks the assumption that a table is the appropriate structure to begin with. But the item renderer is a blob of tax conditions and pricing output, which changes frequently in core updates (not something you want to maintain).
 
-**Improvement**
+#### Rewritten with Atomic Templates
 
-Adopting the following structure would improve extensibility and reduce maintenance
+Adopting the following template structure would improve extensibility and reduce maintenance:
 
 ```
 /app/design/frontend/base/default/checkout/cart.phtml
@@ -126,7 +127,56 @@ Adopting the following structure would improve extensibility and reduce maintena
 
 The item renderer is responsible solely for the structure of each “row”, and the fragments contain all the content-specific logic and output. They can be re-assembled in any configuration to suit the project, whether that is a table or not.
 
-**Magento must component-ize all templates knowing that it cannot write universally appropriate markup.** It must implement a design architecture which facilitates decomposition and reconstruction as efficiently as possible. This also minimizes that amount of code which is drawn into themes (and thus maintenance).
+*File: /app/design/frontend/base/default/checkout/cart/item/default.phtml*
+
+```php
+<tr>
+    <td><?php echo $this->getChildHtml('image'); ?></td>
+
+    <td>
+        <?php echo $this->getChildHtml('name'); ?>
+        <?php echo $this->getChildHtml('options'); ?>
+        <?php echo $this->getChildHtml('edit'); ?>
+    </td>
+
+    <td><?php echo $this->getChildHtml('unit-price'); ?></td>
+
+    <td><?php echo $this->getChildHtml('quantity'); ?></td>
+
+    <td><?php echo $this->getChildHtml('subtotal'); ?></td>
+
+    <td><?php echo $this->getChildHtml('remove'); ?></td>
+</tr>
+```
+
+Or a completely separate pattern that's easier to transform from small screens upward:
+
+```php
+<li>
+    <div class="cart-item-info">
+        <?php echo $this->getChildHtml('name'); ?>
+        <?php echo $this->getChildHtml('options'); ?>
+        <?php echo $this->getChildHtml('image'); ?>
+    </div>
+
+    <div class="cart-item-actions">
+        <?php echo $this->getChildHtml('quantity'); ?>
+        <?php echo $this->getChildHtml('edit'); ?>
+        <?php echo $this->getChildHtml('remove'); ?>
+    </div>
+
+    <div class="cart-item-prices">
+        <?php echo $this->getChildHtml('unit-price'); ?>
+        <?php echo $this->getChildHtml('subtotal'); ?>
+    </div>
+</li>
+```
+
+From this simple example, it's obvious how much code could be put out of the maintenance scope for implementors and how much more flexible the UI can be.
+
+### Magento must atom-icize all templates knowing that it cannot write universally appropriate markup.
+
+It must implement a design architecture which facilitates decomposition and reconstruction as efficiently as possible. This also minimizes that amount of code which is drawn into themes (and thus maintenance).
 
 **Further reading**
 * http://bradfrostweb.com/blog/post/atomic-web-design/ 
