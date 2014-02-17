@@ -15,7 +15,7 @@
 
 ## Table of Contents
 
-### [Project Charter](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/charter/README.md) — The Origin Story
+### [Project Charter](https://github.com/magento-hackathon/operation-frontend-steward/tree/master/charter) — The Origin Story
 
 1. [Why it matters](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/charter/README.md#why-it-matters)
 1. [Proposed schedule of events](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/charter/README.md#proposed-schedule-of-events)
@@ -23,7 +23,7 @@
 1. [Out of scope](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/charter/README.md#out-of-scope)
 1. [Project info](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/charter/README.md#project-info)
 
-### [Principles](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/principles/README.md) — Overarching Frontend Goals
+### [Principles](https://github.com/magento-hackathon/operation-frontend-steward/tree/master/principles) — Overarching Frontend Goals
 
 1. [The perfect CMS does not constrain or coerce its frontend output](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/principles/README.md#1-the-perfect-cms-does-not-constrain-or-coerce-its-frontend-output)
 1. [The core frontend package cannot be Magento's demo](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/principles/README.md#2-the-core-frontend-package-cannot-be-magentos-demo)
@@ -34,7 +34,7 @@
 1. [Decouple visual (CSS) layer from the functional (JavaScript) layer](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/principles/README.md#7-decouple-visual-css-layer-from-the-functional-javascript-layer)
 1. [Decouple functional (JavaScript) layer from the markup (HTML)](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/principles/README.md#8-decouple-functional-javascript-layer-from-the-markup-html)
 
-### [Proposals](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/proposals/README.md) — Major Technical Shifts Needed in Magento 2
+### [Proposals](https://github.com/magento-hackathon/operation-frontend-steward/tree/master/proposals) — Major Technical Shifts Needed in Magento 2
 
 1. [Mobile First](01-mobile-first.md) — Adopt a mobile-first methodology across the design system.
 1. [Atomic Templates](02-atomic-templates.md) — Write templates atomically to contain the smallest possible output.
@@ -48,9 +48,13 @@ Use (RequireJS) or (Browserify) not (HeadJS) for JS loading architecture.
 1. [Retina Icons](09-retina-icons.md) — Use (SVG Sprites + PNG Fallback) or (Retina PNG Sprites) not (Icon Fonts) for icons.
 1. [Comments](10-comments.md) — Write comments in code, and sign comments as Magento.
 
-### [Issues](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/issues/README.md) — Specific Code-Level Problems in Magento 2
+### [Issues](https://github.com/magento-hackathon/operation-frontend-steward/tree/master/issues) — Specific Code-Level Problems in Magento 2
 
 See: https://docs.google.com/spreadsheet/ccc?key=0AgkHIW0ExJHqdGFydXNoQnNFR010MUx3V3V1S1dIbmc
+
+### [Patterns](https://github.com/magento-hackathon/operation-frontend-steward/tree/master/patterns) — UI Components and Markup States in Magento 2
+
+### [Code Style](https://github.com/magento-hackathon/operation-frontend-steward/tree/master/code-style) — Frontend Coding Styleguide for Magento 2
 
 ---
 
