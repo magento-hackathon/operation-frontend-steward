@@ -50,6 +50,8 @@ Use (RequireJS) or (Browserify) not (HeadJS) for JS loading architecture.
 
 ### [Issues](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/issues/README.md) — Specific Code-Level Problems in Magento 2
 
+See: https://docs.google.com/spreadsheet/ccc?key=0AgkHIW0ExJHqdGFydXNoQnNFR010MUx3V3V1S1dIbmc
+
 ---
 
 ## Contributors
