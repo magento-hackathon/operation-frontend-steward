@@ -52,9 +52,9 @@ Use (RequireJS) or (Browserify) not (HeadJS) for JS loading architecture.
 
 See: https://docs.google.com/spreadsheet/ccc?key=0AgkHIW0ExJHqdGFydXNoQnNFR010MUx3V3V1S1dIbmc
 
-### [Patterns](https://github.com/magento-hackathon/operation-frontend-steward/tree/master/patterns) — UI Components and Markup States in Magento 2
+### [Patterns](https://github.com/magento-hackathon/operation-frontend-steward/tree/master/patterns) — Extensible UI Components and Markup States
 
-### [Code Style](https://github.com/magento-hackathon/operation-frontend-steward/tree/master/code-style) — Frontend Coding Styleguide for Magento 2
+### [Code Style](https://github.com/magento-hackathon/operation-frontend-steward/tree/master/code-style) — Writing Consistent, Readable Frontend Code
 
 ---
 
