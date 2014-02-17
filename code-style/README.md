@@ -61,6 +61,8 @@ Rather than re-typing these conventions verbatim, the relevant sections will be 
 
 This repo also contains two examples of refactored PHTML templates, which demonstrate the code-level changes being proposed.
 
+See: https://github.com/magento-hackathon/operation-frontend-steward/tree/master/code-style/phtml
+
 ### Next steps
 
 Ideally Magento will:
