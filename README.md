@@ -48,6 +48,8 @@ Use (RequireJS) or (Browserify) not (HeadJS) for JS loading architecture.
 1. [Retina Icons](09-retina-icons.md) — Use (SVG Sprites + PNG Fallback) or (Retina PNG Sprites) not (Icon Fonts) for icons.
 1. [Comments](10-comments.md) — Write comments in code, and sign comments as Magento.
 
+### [Issues](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/issues/README.md) — Specific Code-Level Problems in Magento 2
+
 ---
 
 ## Contributors
