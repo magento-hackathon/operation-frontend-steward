@@ -23,7 +23,7 @@ Magento should expand its image tools in the following ways:
 
 1. Allow every single image asset in the system (product images, CMS images, category images, category thumbnails) to be processed with output filters.
 1. Every output filter (dimensions, ratio, fill or stretch to dimensions, compression, file type) must be available to every asset via a class or URL parameters.
-1. Create a global “responsive image markup” template and method, which accepts an object of data and parameters. By simply passing in the characteristics, implementors can then globally change the template output as more browser-based responsive images technologies become available, while the data objects stay intact.
+1. Create a global “responsive image markup" template and method, which accepts an object of data and parameters. By simply passing in the characteristics, implementors can then globally change the template output as more browser-based responsive images technologies become available, while the data objects stay intact.
 
 Coupled with the Cloud Four recommendations, Magento could facilitate a very robust image output solution based on the tools it already has.
 

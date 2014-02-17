@@ -10,7 +10,7 @@ This is hard to describe without examples, but I’ll try to keep them relativel
 
 ### Example A: Product View
 
-In Magento 1.x, heavily modifying the product view is a mess because the ```catalog/product/view.phtml``` template contains a significant amount of variability between product types and a great deal of logic spills out into conditionally rendering child templates. This manifests as a problem when components that should be independent like “price box(es)”, “inventory status”, “quantity input”, or “add-to actions” render in different templates within the same parent depending on the product type.
+In Magento 1.x, heavily modifying the product view is a mess because the ```catalog/product/view.phtml``` template contains a significant amount of variability between product types and a great deal of logic spills out into conditionally rendering child templates. This manifests as a problem when components that should be independent like “price box(es)", “inventory status", “quantity input", or “add-to actions" render in different templates within the same parent depending on the product type.
 
 #### Original Magento Code (excerpt)
 
@@ -72,25 +72,25 @@ Deconstructed into more atomic files:
 In this structure you could very easily rewrite (view.phtml) without accepting maintenance burden for any of the interior code as this:
 
 ```php
-<div class=”product-primary-action”>
-    <?php echo $this->getChildHtml(‘add-to-cart’); ?>
+<div class="product-primary-action">
+    <?php echo $this->getChildHtml('add-to-cart’); ?>
 </div>
 
-<div class=”product-secondary-actions”>
-    <?php echo $this->getChildHtml(‘add-to-wishlist’); ?>
-    <?php echo $this->getChildHtml(‘add-to-compare’); ?>
+<div class="product-secondary-actions">
+    <?php echo $this->getChildHtml('add-to-wishlist’); ?>
+    <?php echo $this->getChildHtml('add-to-compare’); ?>
 </div>
 ```
 
 Or this equally viable markup pattern:
 
 ```php
-<div class=”product-actions”>
-    <?php echo $this->getChildHtml(‘add-to-cart’); ?>
+<div class="product-actions">
+    <?php echo $this->getChildHtml('add-to-cart’); ?>
 
-    <ul class=”alternate-actions-list”>
-        <li><?php echo $this->getChildHtml(‘add-to-wishlist’); ?></li>
-        <li><?php echo $this->getChildHtml(‘add-to-compare’); ?></li>
+    <ul class="alternate-actions-list">
+        <li><?php echo $this->getChildHtml('add-to-wishlist’); ?></li>
+        <li><?php echo $this->getChildHtml('add-to-compare’); ?></li>
     </ul>
 </div>
 ```
@@ -125,7 +125,7 @@ Adopting the following template structure would improve extensibility and reduce
 /app/design/frontend/base/default/checkout/cart/item/fragment/image.phtml
 ```
 
-The item renderer is responsible solely for the structure of each “row”, and the fragments contain all the content-specific logic and output. They can be re-assembled in any configuration to suit the project, whether that is a table or not.
+The item renderer is responsible solely for the structure of each “row", and the fragments contain all the content-specific logic and output. They can be re-assembled in any configuration to suit the project, whether that is a table or not.
 
 *File: /app/design/frontend/base/default/checkout/cart/item/default.phtml*
 

@@ -32,13 +32,13 @@ Today, both Sass and LESS can be compiled from the command-line, task runners li
 
 #### B. Bootstrap uses LESS
 
-Bootstrap is a very popular frontend framework that has helped LESS gain in popularity over the past couple of years. Many look to Bootstrap as a “best practice”, but it has historically reversed course significantly on every major architectural decision:
+Bootstrap is a very popular frontend framework that has helped LESS gain in popularity over the past couple of years. Many look to Bootstrap as a “best practice", but it has historically reversed course significantly on every major architectural decision:
 
 * Began fixed width ➔ rewritten responsive in v2
 * Responsiveness was implemented desktop-first ➔ rewritten mobile-first in v3
 * Long-time LESS-only ➔ now officially supports Sass https://github.com/twbs/bootstrap-sass 
 
-Outside the “I only use Bootstrap” camp there is significantly more advocation for Sass. The Bootstrap project has recognized this and now also officially supports Sass as of Bootstrap 3.1.
+Outside the “I only use Bootstrap" camp there is significantly more advocation for Sass. The Bootstrap project has recognized this and now also officially supports Sass as of Bootstrap 3.1.
 
 Said another way: Bootstrap is the only major frontend framework that still supports LESS. 
 

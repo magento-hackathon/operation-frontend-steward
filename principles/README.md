@@ -6,7 +6,7 @@ A top-down approach is not good enough. It is critical that Magento observes the
 
 This precedent cannot only exist in code. Magento must demonstrate how/why these principles are applied through documentation, examples, and written dialog.
 
-This document defines what the community thinks Magento 2's frontend architecture needs to serve. There are no technical recommendations here, these are high-level goals (more “why” than “how”). These principles ensure the technical underpinnings can adapt to diverse implementation requirements and be future-friendly.
+This document defines what the community thinks Magento 2's frontend architecture needs to serve. There are no technical recommendations here, these are high-level goals (more “why" than “how"). These principles ensure the technical underpinnings can adapt to diverse implementation requirements and be future-friendly.
 
 ---
 
@@ -22,7 +22,7 @@ This is significantly more critical for Magento’s frontend than backend. Where
 
 ## 2. The core frontend package cannot be Magento's demo.
 
-In Magento 1.x, the “base/default” package (which all themes inherited) was not neutral. There are specific frontend decisions in its code which only served Magento’s “demo” themes.
+In Magento 1.x, the “base/default" package (which all themes inherited) was not neutral. There are specific frontend decisions in its code which only served Magento’s “demo" themes.
 
 Overriding demo-slanted practices is repetitively annoying, wastes resources better applied elsewhere, and increases cost of ownership. Magento 2’s theming architecture provides for more explicit separation of the core package and theme assets, but Magento cannot passively achieve this goal.
 
@@ -87,7 +87,7 @@ From the Alexa top 50,000 sites just 13% of page load time was on the backend. 8
 
 HTML must pass the W3C Markup Validator: http://validator.w3.org/ 
 
-Every frontend-accessible URL in Magento including markup after DOM manipulations must pass the validator using an HTML5 doctype. Many older browser’s support of web standards degrades significantly if a markup error forces the browser’s rendering engine into “quirks mode”. The importance of producing valid, consistent markup is not debatable.
+Every frontend-accessible URL in Magento including markup after DOM manipulations must pass the validator using an HTML5 doctype. Many older browser’s support of web standards degrades significantly if a markup error forces the browser’s rendering engine into “quirks mode". The importance of producing valid, consistent markup is not debatable.
 
 #### HTML5 Document Outlining
 
