@@ -4,7 +4,7 @@
 
 Icon Fonts are used heavily in Magento 2 to render what are traditionally image-based graphics with resolution independence.
 
-At least 370 million people use (new and old) mobile browsers that don’t support web fonts. Most methods for including icon fonts don’t work with screen-readers or require specific markup patterns to be accessible. While it is possible to provide fallbacks and workarounds for unsupported browsers, the complicated history of this feature means many edge cases are still undetected.
+At least 370 million people use (new and old) mobile browsers that don't support web fonts. Most methods for including icon fonts don't work with screen-readers or require specific markup patterns to be accessible. While it is possible to provide fallbacks and workarounds for unsupported browsers, the complicated history of this feature means many edge cases are still undetected.
 
 There are equally performant solutions for serving graphical icons at multiple resolutions, and they have more consistent and predictable fallback mechanisms.
 

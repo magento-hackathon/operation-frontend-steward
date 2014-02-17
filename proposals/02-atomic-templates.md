@@ -2,11 +2,11 @@
 
 ## Write templates atomically to contain the smallest possible output.
 
-Magento’s layout is assembled from many PHTML templates. To newcomers, this architecture is difficult to understand because not all the parts are known. It's difficult to find templates until you learn to use template path hints.
+Magento's layout is assembled from many PHTML templates. To newcomers, this architecture is difficult to understand because not all the parts are known. It's difficult to find templates until you learn to use template path hints.
 
 For experienced developers working on complex frontend implementations, templates need to be even more aggressively atomic. This would improve maintainability, reduce overrides, and make the core frontend more extensible.
 
-This is hard to describe without examples, but I’ll try to keep them relatively simple. The example patterns are taken from Magento 1.x for familiarity.
+This is hard to describe without examples, but I'll try to keep them relatively simple. The example patterns are taken from Magento 1.x for familiarity.
 
 ### Example A: Product View
 
@@ -73,12 +73,12 @@ In this structure you could very easily rewrite (view.phtml) without accepting m
 
 ```php
 <div class="product-primary-action">
-    <?php echo $this->getChildHtml('add-to-cart’); ?>
+    <?php echo $this->getChildHtml('add-to-cart'); ?>
 </div>
 
 <div class="product-secondary-actions">
-    <?php echo $this->getChildHtml('add-to-wishlist’); ?>
-    <?php echo $this->getChildHtml('add-to-compare’); ?>
+    <?php echo $this->getChildHtml('add-to-wishlist'); ?>
+    <?php echo $this->getChildHtml('add-to-compare'); ?>
 </div>
 ```
 
@@ -86,11 +86,11 @@ Or this equally viable markup pattern:
 
 ```php
 <div class="product-actions">
-    <?php echo $this->getChildHtml('add-to-cart’); ?>
+    <?php echo $this->getChildHtml('add-to-cart'); ?>
 
     <ul class="alternate-actions-list">
-        <li><?php echo $this->getChildHtml('add-to-wishlist’); ?></li>
-        <li><?php echo $this->getChildHtml('add-to-compare’); ?></li>
+        <li><?php echo $this->getChildHtml('add-to-wishlist'); ?></li>
+        <li><?php echo $this->getChildHtml('add-to-compare'); ?></li>
     </ul>
 </div>
 ```

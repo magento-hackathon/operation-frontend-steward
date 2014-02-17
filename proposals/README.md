@@ -1,10 +1,10 @@
-# Proposed Changes in Magento 2’s Frontend Architecture
+# Proposed Changes in Magento 2's Frontend Architecture
 
-Magento 2’s frontend architecture is a combination of new practices and those carried from Magento 1.x. Parts of this frontend architecture / design system are harmful to the present and future needs of Magento’s partners and customers.
+Magento 2's frontend architecture is a combination of new practices and those carried from Magento 1.x. Parts of this frontend architecture / design system are harmful to the present and future needs of Magento's partners and customers.
 
 This document proposes major architectural changes that Magento must consider to be competitive today, and most importantly extensible for the future.
 
-These are not trivial corrections. Evaluating and adopting these practices requires not only deep understanding of the subject matter, but commitment from Magento’s leadership to prioritize modernizing the frontend.
+These are not trivial corrections. Evaluating and adopting these practices requires not only deep understanding of the subject matter, but commitment from Magento's leadership to prioritize modernizing the frontend.
 
 ## [1. Mobile First](01-mobile-first.md)
 Adopt a mobile-first methodology across the design system.

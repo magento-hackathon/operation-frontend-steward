@@ -18,8 +18,8 @@ There are significant architectural issues with authoring classes and selectors 
     * Direct descendent selectors are added, which undesirably bind the selector to the markup structure.
     * An ID is added to the selector to overpower all the chained and familial specificity.
     * Finally, to override the ID it becomes necessary to use !important or inline styles.
-1. That specificity war doesn’t need to start if the base classes are engineered to take advantage of CSS’ natural inheritance and cascade.
-1. From a workflow perspective, it’s often necessary to find all uses of a particular class value within a project. With chained selectors having class values like “products list items", you can search for “products list" but not “products items". A better class value would be “products-list products-items" (although this is redundant) because it would allow you to search on either term. The classes “products" or “list" or “items" are too generic to search for globally within a project.
+1. That specificity war doesn't need to start if the base classes are engineered to take advantage of CSS' natural inheritance and cascade.
+1. From a workflow perspective, it's often necessary to find all uses of a particular class value within a project. With chained selectors having class values like “products list items", you can search for “products list" but not “products items". A better class value would be “products-list products-items" (although this is redundant) because it would allow you to search on either term. The classes “products" or “list" or “items" are too generic to search for globally within a project.
 
 ### Problems in Magento 2
 
@@ -70,7 +70,7 @@ In this very simple example, additional flaws in chaining classes are obvious:
 1. Element-named classes are so broad they will never have styling applied to them globally. This makes them redundant and only only serving to scope the content-based class name (which unnecessarily raised specificity).
     * The “product" class will never be usable independently because of its indiscriminate use on list items, image wrappers, text wrappers, and action wrappers.
     * The “list" class could applies to any type of list (and therefore none).
-    * The “action" class could applies to elements which may be styled as text links, image links, or buttons depending on the implementation’s needs.
+    * The “action" class could applies to elements which may be styled as text links, image links, or buttons depending on the implementation's needs.
 1. Developers have too many options to write selectors for this component. Four of six have identical specificity, which means that the last selector declared in the CSS source order will have precedence. Selector applicability should never depend on source order in a properly architected design system:
 
 ```
@@ -126,7 +126,7 @@ And the improved CSS selectors (with specificity):
 1. All class names describe the element they are applied to. This makes it possible to define base styling across modules that is inherited and easily override-able with parent selectors.
 1. The average specificity is 20, and the highest specificity is 30. In every case this is half the specificity of using chained classes.
 1. This markup is significantly more extensible because we can define a global style for “.product-photo" and then cleanly override it based on its component context. Taken a step further you could provide custom styles for individual items while still keeping specificity under 30 at the element level.
-1. It can also inherit object-based styles for components like buttons cleanly. Note: the “.button" class is applied, but to select the button instances we don’t need to use it in a selector. Capturing only the content-based class name (.add-to-cart) utilizes the cascade but allows for variation.
+1. It can also inherit object-based styles for components like buttons cleanly. Note: the “.button" class is applied, but to select the button instances we don't need to use it in a selector. Capturing only the content-based class name (.add-to-cart) utilizes the cascade but allows for variation.
 
 #### Further reading
 

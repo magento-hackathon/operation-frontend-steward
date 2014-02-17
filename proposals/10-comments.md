@@ -21,8 +21,8 @@ Signing comments by company namespace helps developers easily spot their comment
 <?php if ($xyz >= $abc && $response !== null): ?>
     <?php
     // GravDept:
-    // This is my company’s comment.
-    // It’s obvious instantly who owns the comment without seeing the code.
+    // This is my company's comment.
+    // It's obvious instantly who owns the comment without seeing the code.
     ?>
     <div>Something custom here</div>
 <?php endif; ?>

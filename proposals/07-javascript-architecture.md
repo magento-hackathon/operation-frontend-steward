@@ -13,7 +13,7 @@ Magento 1.x has significant performance constraints because of its JavaScript ar
 
 The best approach in Magento 1.x is minifying all JS and serving each file individually. This allows the browser to cache it, but the first page load has a high HTTP request burden which can be excessive on a high-latency connection. Still this approach outperforms concatenation.
 
-In Magento 2, Prototype has been replaced with jQuery and the script loader HeadJS has been implemented. This is an improvement in that only one script is loaded in the <head> and the rest asynchronously, but it allows the continued obsolete practice of inlining JS throughout PHTML templates. HeadJS has recently veered into Modernizr’s territory providing browser feature tests and rudimentary media query helpers. On the surface this seems relevant, but this violates the single responsibility principle. There are more powerful individual tools which can be assembled leaner than using a jack-of-all-trades plugin.
+In Magento 2, Prototype has been replaced with jQuery and the script loader HeadJS has been implemented. This is an improvement in that only one script is loaded in the <head> and the rest asynchronously, but it allows the continued obsolete practice of inlining JS throughout PHTML templates. HeadJS has recently veered into Modernizr's territory providing browser feature tests and rudimentary media query helpers. On the surface this seems relevant, but this violates the single responsibility principle. There are more powerful individual tools which can be assembled leaner than using a jack-of-all-trades plugin.
 
 Magento needs a platform-wide restructuring of its JS architecture. Ideally it should meet these requirements:
 
@@ -22,7 +22,7 @@ Magento needs a platform-wide restructuring of its JS architecture. Ideally it s
 * All scripts are loaded asynchronously.
 * The loading order does not determine the execution order.
 * Each script may be defined with dependencies, and will not execute until after dependencies are loaded.
-* Fallback URIs are providable if a script’s host is inaccessible.
+* Fallback URIs are providable if a script's host is inaccessible.
 * Intelligent concatenation (or by configuration) for scripts that always load together or are loaded globally.
 * Debug easily from a browser.
 

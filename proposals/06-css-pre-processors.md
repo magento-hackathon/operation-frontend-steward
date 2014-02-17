@@ -24,9 +24,9 @@ In Magento 2, the ```magento_plushe``` theme currently uses LESS, which is an in
 
 #### A. LESS is easier to install
 
-Simply add a JS file and any site can render LESS client-side. Of course, this is not pre-processing and even LESS doesn’t recommend this practice anymore, but the low barrier helped the project gain significant traction.
+Simply add a JS file and any site can render LESS client-side. Of course, this is not pre-processing and even LESS doesn't recommend this practice anymore, but the low barrier helped the project gain significant traction.
 
-By contrast, Sass was born in Rails’ asset pipeline and compiles with Ruby. In the early days, you had to install Ruby to use Sass which many frontend people were not comfortable doing.
+By contrast, Sass was born in Rails' asset pipeline and compiles with Ruby. In the early days, you had to install Ruby to use Sass which many frontend people were not comfortable doing.
 
 Today, both Sass and LESS can be compiled from the command-line, task runners like http://gruntjs.com/ or http://gulpjs.com/, or GUI applications like http://incident57.com/codekit/ or http://mhs.github.io/scout-app/.
 
@@ -48,7 +48,7 @@ Said another way: Bootstrap is the only major frontend framework that still supp
 
 #### A. Sass has Compass
 
-Compass is robust mixin library for Sass that offers CSS3 mixins, Helpers, and Sprite generators. While LESS has a number of mixin libraries, they don’t rival the robustness of Compass.
+Compass is robust mixin library for Sass that offers CSS3 mixins, Helpers, and Sprite generators. While LESS has a number of mixin libraries, they don't rival the robustness of Compass.
 
 #### B. Sass has full programming logic available
 
