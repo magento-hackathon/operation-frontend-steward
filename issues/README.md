@@ -12,3 +12,9 @@ Rather than flood the Magento 2 repo with issues, we setup a spreadsheet to trac
 1. Discuss each issue and mark duplicates.
 1. Expand rationale with comments and use case (if necessary).
 1. Assign value/priority, ease of implementation, and acceptance chance.
+
+### Pull Requests
+
+Part of the OFS team started making pull requests directly on the Magento 2 repo based on these issues. These are quick wins for improving Magento at the code-level.
+
+If you have any further suggestions, you can add them to this repo's issue tracker or contribute directly to the Magento 2 repo.

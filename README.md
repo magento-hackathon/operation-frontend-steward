@@ -4,7 +4,7 @@
 
 ---
 
-**Operation Frontend Steward is a four-pronged offense to improve Magento 2's frontend:**
+### Operation Frontend Steward is a four-pronged offense to improve Magento 2's frontend
 
 1. Define strategic overarching principles Magento 2's frontend needs to uphold (think "10 commandments").
 1. Create public documentation of frontend patterns used in Magento 2.
