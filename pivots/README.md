@@ -1,4 +1,4 @@
-# Proposed Changes in Magento 2's Frontend Architecture
+# Pivots in Magento 2's Frontend Architecture
 
 Magento 2's frontend architecture is a combination of new practices and those carried from Magento 1.x. Parts of this frontend architecture / design system are harmful to the present and future needs of Magento's partners and customers.
 

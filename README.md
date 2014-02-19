@@ -34,19 +34,19 @@
 1. [Decouple visual (CSS) layer from the functional (JavaScript) layer](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/principles/README.md#7-decouple-visual-css-layer-from-the-functional-javascript-layer)
 1. [Decouple functional (JavaScript) layer from the markup (HTML)](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/principles/README.md#8-decouple-functional-javascript-layer-from-the-markup-html)
 
-### [Proposals](https://github.com/magento-hackathon/operation-frontend-steward/tree/master/proposals) — Major Technical Shifts Needed in Magento 2
+### [Pivots](https://github.com/magento-hackathon/operation-frontend-steward/tree/master/pivots) — Major Technical Shifts Needed in Magento 2
 
-1. [Mobile First](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/proposals/01-mobile-first.md) — Adopt a mobile-first methodology across the design system.
-1. [Atomic Templates](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/proposals/02-atomic-templates.md) — Write templates atomically to contain the smallest possible output.
-1. [DRY Principles](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/proposals/03-dry-principles.md) — Embrace DRY (Don't Repeat Yourself) principles consistently.
-1. [Checkout UX](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/proposals/04-checkout-ux.md) — Use (Woven Checkout) not (Accordion + Sidebar) for OnePageCheckout.
-1. [CSS Architecture](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/proposals/05-css-architecture.md) — Write HTML classes for (OO-CSS) not (chained-classes CSS).
-1. [CSS Pre-Processors](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/proposals/06-css-pre-processors.md) — Use (Sass + Compass) not (LESS) for CSS pre-processing.
-1. [JavaScript Architecture](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/proposals/07-javascript-architecture.md)
+1. [Mobile First](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/pivots/01-mobile-first.md) — Adopt a mobile-first methodology across the design system.
+1. [Atomic Templates](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/pivots/02-atomic-templates.md) — Write templates atomically to contain the smallest possible output.
+1. [DRY Principles](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/pivots/03-dry-principles.md) — Embrace DRY (Don't Repeat Yourself) principles consistently.
+1. [Checkout UX](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/pivots/04-checkout-ux.md) — Use (Woven Checkout) not (Accordion + Sidebar) for OnePageCheckout.
+1. [CSS Architecture](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/pivots/05-css-architecture.md) — Write HTML classes for (OO-CSS) not (chained-classes CSS).
+1. [CSS Pre-Processors](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/pivots/06-css-pre-processors.md) — Use (Sass + Compass) not (LESS) for CSS pre-processing.
+1. [JavaScript Architecture](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/pivots/07-javascript-architecture.md)
 Use (RequireJS) or (Browserify) not (HeadJS) for JS loading architecture.
-1. [Responsive Images](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/proposals/08-responsive-images.md) — Use (PictureFill) and plan for the technology to change.
-1. [Retina Icons](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/proposals/09-retina-icons.md) — Use (SVG Sprites + PNG Fallback) or (Retina PNG Sprites) not (Icon Fonts) for icons.
-1. [Comments](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/proposals/10-comments.md) — Write comments in code, and sign comments as Magento.
+1. [Responsive Images](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/pivots/08-responsive-images.md) — Use (PictureFill) and plan for the technology to change.
+1. [Retina Icons](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/pivots/09-retina-icons.md) — Use (SVG Sprites + PNG Fallback) or (Retina PNG Sprites) not (Icon Fonts) for icons.
+1. [Comments](https://github.com/magento-hackathon/operation-frontend-steward/blob/master/pivots/10-comments.md) — Write comments in code, and sign comments as Magento.
 
 ### [Issues](https://github.com/magento-hackathon/operation-frontend-steward/tree/master/issues) — Specific Code-Level Problems in Magento 2
 
