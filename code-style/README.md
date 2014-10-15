@@ -30,32 +30,32 @@ Rather than re-typing these conventions verbatim, the relevant sections will be 
 
 #### HTML
 
-* http://manuals.gravitydept.com/html/styleguide
-* http://manuals.gravitydept.com/html/semantics
-* http://manuals.gravitydept.com/html/conventions
+* http://manuals.gravitydept.com/code/html/styleguide
+* http://manuals.gravitydept.com/code/html/semantics
+* http://manuals.gravitydept.com/code/html/conventions
 
 #### CSS
 
-* http://manuals.gravitydept.com/css/styleguide
-* http://manuals.gravitydept.com/css/comments
-* http://manuals.gravitydept.com/css/specificity
+* http://manuals.gravitydept.com/code/css/styleguide
+* http://manuals.gravitydept.com/code/css/comments
+* http://manuals.gravitydept.com/code/css/specificity
 
 #### JavaScript
 
-* http://manuals.gravitydept.com/js/styleguide
+* http://manuals.gravitydept.com/code/js/styleguide
 
 #### PHP
 
-* http://manuals.gravitydept.com/php/styleguide
-* http://manuals.gravitydept.com/php/comments
-* http://manuals.gravitydept.com/php/templating
+* http://manuals.gravitydept.com/code/php/styleguide
+* http://manuals.gravitydept.com/code/php/comments
+* http://manuals.gravitydept.com/code/php/templating
 
 #### Magento Specifics
 
-* http://manuals.gravitydept.com/magento/theme-fallback
-* http://manuals.gravitydept.com/magento/phtml-templates
-* http://manuals.gravitydept.com/magento/layout-xml
-* http://manuals.gravitydept.com/magento/translation
+* http://manuals.gravitydept.com/platforms/magento/theme-fallback
+* http://manuals.gravitydept.com/platforms/magento/phtml-templates
+* http://manuals.gravitydept.com/platforms/magento/layout-xml
+* http://manuals.gravitydept.com/platforms/magento/translation
 
 #### Example code
 
